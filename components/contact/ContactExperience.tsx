@@ -60,16 +60,16 @@ export default function ContactExperience() {
     setIsSubmitted(false);
 
     const FORM_URL =
-      "https://docs.google.com/forms/d/e/1FAIpQLSfpkeq2BZu0RhUmfMyIkwXYMaar9mOcYCkpUbD4zcYijVY4Ng/formResponse";
+      "https://docs.google.com/forms/d/e/1FAIpQLSc7RnW4QXwdXuZ09ZlCXa0XQBJLgZriXzejgqaKeZzwXrX4FA/formResponse";
 
     const formBody = new URLSearchParams();
 
     // Google Form field IDs
-    formBody.append("entry.1974122776", formData.fullName);
-    formBody.append("entry.586523070", formData.phone);
-    formBody.append("entry.431084536", formData.email);
-    formBody.append("entry.1031745543", formData.requirements);
-    formBody.append("entry.1589498007", formData.comments);
+    formBody.append("entry.1430880692", formData.fullName);
+    formBody.append("entry.429958201", formData.phone);
+    formBody.append("entry.616465487", formData.email);
+    formBody.append("entry.7840522", formData.requirements);
+    formBody.append("entry.186503003", formData.comments);
 
     try {
       await fetch(FORM_URL, {
