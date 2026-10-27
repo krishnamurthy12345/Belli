@@ -241,30 +241,43 @@ export default function Footer() {
 
         {/* =====================================================
             BOTTOM BAR
-        ====================================================== */}
+        ====================================================== */ }
 
-        <div className="flex flex-col gap-4 py-7 text-xs text-white/35 sm:flex-row sm:items-center sm:justify-between">
-          <p>
-            © {new Date().getFullYear()} Belli&apos;s Capital. All rights
-            reserved.
-          </p>
+<div className="flex flex-col gap-4 py-7 text-xs text-white/35 sm:flex-row sm:items-center sm:justify-between">
+  <div className="flex flex-wrap items-center gap-2">
+    <p>
+      © {new Date().getFullYear()} Belli&apos;s Capital. All rights reserved.
+    </p>
 
-          <div className="flex gap-6">
-            <Link
-              href="#"
-              className="transition-colors duration-300 hover:text-white"
-            >
-              Privacy Policy
-            </Link>
+    <span className="text-white/20">|</span>
 
-            <Link
-              href="#"
-              className="transition-colors duration-300 hover:text-white"
-            >
-              Terms of Use
-            </Link>
-          </div>
-        </div>
+    <a
+      href="https://www.gdinexus.in/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="transition-colors duration-300 hover:text-[#D4AF37]"
+    >
+      Powered by <span className="font-semibold text-white/50 hover:text-[#D4AF37]">GDI Nexus</span>
+    </a>
+  </div>
+
+  <div className="flex gap-6">
+    <Link
+      href="/privacy-policy"
+      className="transition-colors duration-300 hover:text-white"
+    >
+      Privacy Policy
+    </Link>
+
+    <Link
+      href="/terms"
+      className="transition-colors duration-300 hover:text-white"
+    >
+      Terms of Use
+    </Link>
+  </div>
+</div>
+
       </div>
     </footer>
   );

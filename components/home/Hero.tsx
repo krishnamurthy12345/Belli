@@ -141,7 +141,7 @@ export default function InvestmentScene() {
           sm:text-[160px]
           lg:text-[220px]
         "
-      >
+      >  BELLIS
         CAPITAL
       </motion.div>
 

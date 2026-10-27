@@ -18,7 +18,7 @@ const solutions = [
     title: "Mutual Funds",
     description:
       "Diversified investment solutions designed around your financial goals and risk profile.",
-    href: "/mutual-funds",
+    href: "/contact",
     image:
       "https://images.unsplash.com/photo-1559526324-593bc073d938?auto=format&fit=crop&w=1200&q=85",
   },
@@ -27,7 +27,7 @@ const solutions = [
     title: "Systematic Investment Plan",
     description:
       "Build disciplined investing habits by investing a fixed amount at regular intervals.",
-    href: "/sip",
+    href: "/contact",
     image:
       "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1200&q=85",
   },
@@ -36,7 +36,7 @@ const solutions = [
     title: "Wealth Planning",
     description:
       "Create a structured financial roadmap for your short-term and long-term goals.",
-    href: "/calculators",
+    href: "/contact",
     image:
       "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=1200&q=85",
   },

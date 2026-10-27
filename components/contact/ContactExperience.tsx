@@ -86,6 +86,8 @@ export default function ContactExperience() {
       setIsSubmitting(false);
       setIsSubmitted(true);
 
+        alert("Thank you! Your request has been submitted successfully.");
+
       setFormData({
         fullName: "",
         phone: "",
@@ -451,6 +453,22 @@ export default function ContactExperience() {
                     <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.762 2.239 5 5 5h14c2.762 0 5-2.238 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
                   </svg>
                 </a>
+
+                <a
+  href="https://www.instagram.com/belliscapital/"
+  target="_blank"
+  rel="noreferrer"
+  aria-label="Bellis Capital Instagram"
+  className="flex h-11 w-11 items-center justify-center rounded-xl border border-[#E4EBE7] bg-white text-[#53635C] shadow-sm transition-all hover:bg-[#0B3D2E] hover:text-[#D4AF37]"
+>
+  <svg
+    className="h-5 w-5 fill-current"
+    viewBox="0 0 24 24"
+    aria-hidden="true"
+  >
+    <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.25-3.25a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5z" />
+  </svg>
+</a>
               </div>
             </motion.div>
 
@@ -557,11 +575,7 @@ export default function ContactExperience() {
 
                   <Send size={15} className="text-[#D4AF37]" />
                 </button>
-                {isSubmitted && (
-                  <p className="mt-2 text-center text-sm font-semibold text-[#0B3D2E]">
-                    Thank you! Your request has been submitted successfully.
-                  </p>
-                )}
+
               </form>
             </motion.div>
           </div>

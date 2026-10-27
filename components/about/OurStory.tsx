@@ -185,6 +185,22 @@ export default function OurStory() {
                       <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
                     </svg>
                   </a>
+
+                  <a
+  href="https://www.instagram.com/belliscapital/"
+  target="_blank"
+  rel="noreferrer"
+  aria-label="Bellis Capital Instagram"
+  className="flex h-11 w-11 items-center justify-center rounded-xl border border-[#E4EBE7] bg-white text-[#53635C] shadow-sm transition-all hover:bg-[#0B3D2E] hover:text-[#D4AF37]"
+>
+  <svg
+    className="h-5 w-5 fill-current"
+    viewBox="0 0 24 24"
+    aria-hidden="true"
+  >
+    <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.25-3.25a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5z" />
+  </svg>
+</a>
               </div>
             </div>
           </div>
