@@ -65,7 +65,7 @@ export default function PrivacyPolicyPage() {
         <li>Authentication codes</li>
       </ul>
 
-      <h2 className="text-xl font-semibold mt-6 mb-2">13. Contact Us</h2>
+      <h2 className="text-xl font-semibold mt-6 mb-2">5. Contact Us</h2>
       <div className="mt-4 space-y-1">
         <p><strong>Bellis Capital</strong></p>
         <p><strong>Email:</strong> <a href="mailto:belliscapitalofficial@gmail.com" className="text-blue-600 underline">belliscapitalofficial@gmail.com</a></p>

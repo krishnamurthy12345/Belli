@@ -8,29 +8,31 @@ import {
   MapPin,
   MessageCircle,
   Phone,
-  Send,
+  Send
 } from "lucide-react";
 import Link from "next/link";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const contactItems = [
   {
     icon: Mail,
     label: "Email Inquiry",
     value: "belliscapitalofficial@gmail.com",
-    href: "mailto:belliscapitalofficial@gmail.com",
+    href: "mailto:belliscapitalofficial@gmail.com"
   },
   {
     icon: Phone,
     label: "Direct Call",
     value: "+91 94889 74620",
-    href: "tel:+919488974620",
+    href: "tel:+919488974620"
   },
   {
     icon: MapPin,
     label: "Headquarters",
     value: "Coimbatore, Tamil Nadu, India",
-    href: "https://maps.app.goo.gl/gMkDZVo4oSWv3dHH9",
-  },
+    href: "https://maps.app.goo.gl/gMkDZVo4oSWv3dHH9"
+  }
 ];
 
 export default function ContactExperience() {
@@ -39,7 +41,7 @@ export default function ContactExperience() {
     phone: "",
     email: "",
     requirements: "",
-    comments: "",
+    comments: ""
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -60,25 +62,25 @@ export default function ContactExperience() {
     setIsSubmitted(false);
 
     const FORM_URL =
-      "https://docs.google.com/forms/d/e/1FAIpQLSc7RnW4QXwdXuZ09ZlCXa0XQBJLgZriXzejgqaKeZzwXrX4FA/formResponse";
+      "https://docs.google.com/forms/d/e/1FAIpQLSf19cGLsqzW0M0USNK5gx5KuuLxnJCO0v7ulPHrsfub3W1X2g/formResponse";
 
     const formBody = new URLSearchParams();
 
     // Google Form field IDs
-    formBody.append("entry.1430880692", formData.fullName);
-    formBody.append("entry.429958201", formData.phone);
-    formBody.append("entry.616465487", formData.email);
-    formBody.append("entry.7840522", formData.requirements);
-    formBody.append("entry.186503003", formData.comments);
+    formBody.append("entry.918414218", formData.fullName);
+    formBody.append("entry.906267862", formData.phone);
+    formBody.append("entry.1521013559", formData.email);
+    formBody.append("entry.1857973263", formData.requirements);
+    formBody.append("entry.1477974961", formData.comments);
 
     try {
       await fetch(FORM_URL, {
         method: "POST",
         mode: "no-cors",
         headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
+          "Content-Type": "application/x-www-form-urlencoded"
         },
-        body: formBody.toString(),
+        body: formBody.toString()
       });
 
       // Google Forms does not expose the response because of no-cors.
@@ -86,24 +88,34 @@ export default function ContactExperience() {
       setIsSubmitting(false);
       setIsSubmitted(true);
 
-        alert("Thank you! Your request has been submitted successfully.");
+      toast.success("Thank you! Your request has been submitted successfully.");
 
       setFormData({
         fullName: "",
         phone: "",
         email: "",
         requirements: "",
-        comments: "",
+        comments: ""
       });
     } catch (error) {
       console.error("Submission error:", error);
       setIsSubmitting(false);
       setIsSubmitted(false);
+      // Error Toast
+      toast.error("Something went wrong. Please try again.");
     }
   };
 
   return (
     <main className="min-h-screen overflow-hidden bg-[#F8FAF8]">
+
+      <ToastContainer position="top-right" autoClose={3000} hideProgressBar={false}
+        newestOnTop
+        closeOnClick
+        pauseOnHover
+        draggable
+        theme="colored"
+      />
       {/* ========================================================= */}
       {/* HERO */}
       {/* ========================================================= */}
@@ -130,14 +142,14 @@ export default function ContactExperience() {
             <motion.div
               initial={{
                 opacity: 0,
-                x: -30,
+                x: -30
               }}
               animate={{
                 opacity: 1,
-                x: 0,
+                x: 0
               }}
               transition={{
-                duration: 0.8,
+                duration: 0.8
               }}
               className="relative z-10"
             >
@@ -156,17 +168,15 @@ export default function ContactExperience() {
                 <br />
                 financial chapter
                 <br />
-                <span className="text-[#D4AF37]">
-                  starts here.
-                </span>
+                <span className="text-[#D4AF37]">starts here.</span>
               </h1>
 
               {/* Description */}
               <p className="mt-7 max-w-xl text-base leading-8 text-white/60 sm:text-lg">
-                Whether you are building your first investment plan,
-                managing an established portfolio, or planning for
-                long-term financial goals, Bellis Capital provides
-                structured guidance with clarity and discipline.
+                Whether you are building your first investment plan, managing an
+                established portfolio, or planning for long-term financial
+                goals, Bellis Capital provides structured guidance with clarity
+                and discipline.
               </p>
 
               {/* Buttons */}
@@ -176,7 +186,6 @@ export default function ContactExperience() {
                   className="group inline-flex items-center gap-2 rounded-full bg-[#D4AF37] px-7 py-4 text-sm font-bold text-[#10231C] transition-all duration-300 hover:-translate-y-1 hover:bg-[#E4C65B]"
                 >
                   Start a Conversation
-
                   <ArrowRight
                     size={17}
                     className="transition-transform duration-300 group-hover:translate-x-1"
@@ -210,16 +219,16 @@ export default function ContactExperience() {
               initial={{
                 opacity: 0,
                 x: 30,
-                scale: 0.92,
+                scale: 0.92
               }}
               animate={{
                 opacity: 1,
                 x: 0,
-                scale: 1,
+                scale: 1
               }}
               transition={{
                 duration: 1,
-                delay: 0.15,
+                delay: 0.15
               }}
               className="relative flex min-h-[430px] items-center justify-center sm:min-h-[520px]"
             >
@@ -229,12 +238,12 @@ export default function ContactExperience() {
               {/* Outer rotating ring */}
               <motion.div
                 animate={{
-                  rotate: 360,
+                  rotate: 360
                 }}
                 transition={{
                   duration: 35,
                   repeat: Infinity,
-                  ease: "linear",
+                  ease: "linear"
                 }}
                 className="absolute h-[370px] w-[370px] rounded-full border border-[#D4AF37]/20 sm:h-[450px] sm:w-[450px]"
               >
@@ -246,12 +255,12 @@ export default function ContactExperience() {
               {/* Middle ring */}
               <motion.div
                 animate={{
-                  rotate: -360,
+                  rotate: -360
                 }}
                 transition={{
                   duration: 24,
                   repeat: Infinity,
-                  ease: "linear",
+                  ease: "linear"
                 }}
                 className="absolute h-[280px] w-[280px] rounded-full border border-white/10 sm:h-[340px] sm:w-[340px]"
               >
@@ -261,12 +270,12 @@ export default function ContactExperience() {
               {/* Inner ring */}
               <motion.div
                 animate={{
-                  rotate: 360,
+                  rotate: 360
                 }}
                 transition={{
                   duration: 16,
                   repeat: Infinity,
-                  ease: "linear",
+                  ease: "linear"
                 }}
                 className="absolute h-[190px] w-[190px] rounded-full border border-[#D4AF37]/30 sm:h-[230px] sm:w-[230px]"
               >
@@ -276,12 +285,12 @@ export default function ContactExperience() {
               {/* Central card */}
               <motion.div
                 animate={{
-                  y: [0, -10, 0],
+                  y: [0, -10, 0]
                 }}
                 transition={{
                   duration: 5,
                   repeat: Infinity,
-                  ease: "easeInOut",
+                  ease: "easeInOut"
                 }}
                 className="relative z-10 flex h-[190px] w-[190px] flex-col items-center justify-center rounded-full border border-[#D4AF37]/40 bg-[#10231C]/90 shadow-[0_0_80px_rgba(212,175,55,0.12)] backdrop-blur-xl sm:h-[220px] sm:w-[220px]"
               >
@@ -309,15 +318,15 @@ export default function ContactExperience() {
               <motion.div
                 initial={{
                   opacity: 0,
-                  x: 25,
+                  x: 25
                 }}
                 animate={{
                   opacity: 1,
-                  x: 0,
+                  x: 0
                 }}
                 transition={{
                   duration: 0.7,
-                  delay: 0.9,
+                  delay: 0.9
                 }}
                 className="absolute right-0 top-[12%] z-20 rounded-2xl border border-white/10 bg-white/[0.07] px-5 py-4 shadow-2xl backdrop-blur-xl"
               >
@@ -334,15 +343,15 @@ export default function ContactExperience() {
               <motion.div
                 initial={{
                   opacity: 0,
-                  y: 20,
+                  y: 20
                 }}
                 animate={{
                   opacity: 1,
-                  y: 0,
+                  y: 0
                 }}
                 transition={{
                   duration: 0.7,
-                  delay: 1.05,
+                  delay: 1.05
                 }}
                 className="absolute bottom-[8%] left-0 z-20 rounded-2xl border border-white/10 bg-[#10231C]/90 px-5 py-4 shadow-2xl backdrop-blur-xl"
               >
@@ -384,8 +393,8 @@ export default function ContactExperience() {
               </h2>
 
               <p className="mt-5 max-w-md text-sm leading-7 text-[#53635C]">
-                Use the details below to connect with the Bellis Capital team and
-                begin a conversation around your financial goals.
+                Use the details below to connect with the Bellis Capital team
+                and begin a conversation around your financial goals.
               </p>
 
               {/* Contact Cards */}
@@ -455,20 +464,20 @@ export default function ContactExperience() {
                 </a>
 
                 <a
-  href="https://www.instagram.com/belliscapital/"
-  target="_blank"
-  rel="noreferrer"
-  aria-label="Bellis Capital Instagram"
-  className="flex h-11 w-11 items-center justify-center rounded-xl border border-[#E4EBE7] bg-white text-[#53635C] shadow-sm transition-all hover:bg-[#0B3D2E] hover:text-[#D4AF37]"
->
-  <svg
-    className="h-5 w-5 fill-current"
-    viewBox="0 0 24 24"
-    aria-hidden="true"
-  >
-    <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.25-3.25a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5z" />
-  </svg>
-</a>
+                  href="https://www.instagram.com/belliscapital/"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Bellis Capital Instagram"
+                  className="flex h-11 w-11 items-center justify-center rounded-xl border border-[#E4EBE7] bg-white text-[#53635C] shadow-sm transition-all hover:bg-[#0B3D2E] hover:text-[#D4AF37]"
+                >
+                  <svg
+                    className="h-5 w-5 fill-current"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.25-3.25a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5z" />
+                  </svg>
+                </a>
               </div>
             </motion.div>
 
@@ -490,7 +499,10 @@ export default function ContactExperience() {
                 Share a few details and our team will connect with you.
               </p>
 
-              <form onSubmit={handleSubmit} className="mt-6 flex flex-col gap-4">
+              <form
+                onSubmit={handleSubmit}
+                className="mt-6 flex flex-col gap-4"
+              >
                 <div>
                   <label className="block text-[10px] font-bold uppercase tracking-wider text-[#53635C]">
                     Full Name
@@ -575,7 +587,6 @@ export default function ContactExperience() {
 
                   <Send size={15} className="text-[#D4AF37]" />
                 </button>
-
               </form>
             </motion.div>
           </div>
@@ -595,14 +606,14 @@ export default function ContactExperience() {
           <motion.div
             initial={{
               opacity: 0,
-              y: 20,
+              y: 20
             }}
             whileInView={{
               opacity: 1,
-              y: 0,
+              y: 0
             }}
             viewport={{
-              once: true,
+              once: true
             }}
           >
             <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#D4AF37]">
@@ -614,8 +625,8 @@ export default function ContactExperience() {
             </h2>
 
             <p className="mx-auto mt-6 max-w-2xl text-sm leading-7 text-white/45">
-              Start by sharing what matters to you. The investment
-              journey can follow from there.
+              Start by sharing what matters to you. The investment journey can
+              follow from there.
             </p>
 
             <a
