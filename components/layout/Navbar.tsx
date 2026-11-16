@@ -190,22 +190,14 @@ export default function Navbar() {
               >
                 <div
                   className="
-                    relative
-                    h-12
-                    w-12
-                    shrink-0
-                    overflow-hidden
-                    rounded-xl
-                    bg-white
+                    relative flex h-14 w-14 items-center justify-center overflow-hidden rounded-2xl border border-[#D4AF37]/30 bg-white shadow-[0_10px_30px_rgba(0,0,0,0.25)] transition-all duration-300 group-hover:border-[#D4AF37]/70
                   "
                 >
                   <img
                     src="/images/bellis-logo.jpeg"
                     alt="Bellis Capital"
                     className="
-                      h-full
-                      w-full
-                      object-cover
+                     object-contain p-1.5 transition-transform duration-500 group-hover:scale-105
                     "
                   />
                 </div>
