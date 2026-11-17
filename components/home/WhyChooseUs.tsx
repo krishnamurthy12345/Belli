@@ -50,7 +50,7 @@ export default function WhyChooseUs() {
             transition={{ duration: 0.7 }}
             className="relative"
           >
-            <div className="relative min-h-[520px] overflow-hidden rounded-[36px] bg-[#10231C] p-7 sm:p-10">
+            <div className="relative min-h-[520px] overflow-hidden rounded-[36px] bg-[var(--color-dark)] p-7 sm:p-10">
               {/* Decorative circles */}
               <motion.div
                 animate={{
@@ -62,7 +62,7 @@ export default function WhyChooseUs() {
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}
-                className="absolute -right-32 -top-32 h-[360px] w-[360px] rounded-full border border-[#D4AF37]/20"
+                className="absolute -right-32 -top-32 h-[360px] w-[360px] rounded-full border border-[var(--color-primary)]/20"
               />
 
               <motion.div
@@ -90,7 +90,7 @@ export default function WhyChooseUs() {
               <div className="relative flex h-full min-h-[460px] flex-col justify-between">
                 <div>
                   <div className="flex items-center gap-2">
-                    <span className="h-2 w-2 rounded-full bg-[#D4AF37]" />
+                    <span className="h-2 w-2 rounded-full bg-[var(--color-primary)]" />
 
                     <span className="text-xs font-semibold uppercase tracking-[0.2em] text-white/50">
                       Your Financial Journey
@@ -100,7 +100,7 @@ export default function WhyChooseUs() {
                   <h3 className="mt-7 max-w-sm text-4xl font-semibold leading-tight tracking-[-0.03em] text-white sm:text-5xl">
                     Plan today.
                     <br />
-                    <span className="text-[#D4AF37]">
+                    <span className="text-[var(--color-primary)]">
                       Grow tomorrow.
                     </span>
                   </h3>
@@ -127,8 +127,8 @@ export default function WhyChooseUs() {
                       }}
                       className="relative mb-5 flex items-center gap-5 last:mb-0"
                     >
-                      <div className="relative z-10 flex h-9 w-9 items-center justify-center rounded-full border border-[#D4AF37]/40 bg-[#10231C]">
-                        <div className="h-2.5 w-2.5 rounded-full bg-[#D4AF37]" />
+                      <div className="relative z-10 flex h-9 w-9 items-center justify-center rounded-full border border-[var(--color-primary)]/40 bg-[var(--color-dark)]">
+                        <div className="h-2.5 w-2.5 rounded-full bg-[var(--color-primary)]" />
                       </div>
 
                       <div>
@@ -165,7 +165,7 @@ export default function WhyChooseUs() {
                     </p>
                   </div>
 
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#D4AF37] text-[#10231C]">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--color-primary)] text-[var(--color-dark)]">
                     <ArrowUpRight size={18} />
                   </div>
                 </motion.div>
@@ -191,19 +191,19 @@ export default function WhyChooseUs() {
                   ease: "easeInOut",
                 },
               }}
-              className="absolute -bottom-5 -right-4 rounded-2xl border border-[#E4EBE7] bg-white p-4 shadow-xl sm:-right-6"
+              className="absolute -bottom-5 -right-4 rounded-2xl border border-[var(--border-color)] bg-white p-4 shadow-xl sm:-right-6"
             >
               <div className="flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#EAF4EE] text-[#0B3D2E]">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[var(--border-color)]/30 text-[var(--color-dark)]">
                   <Check size={18} />
                 </div>
 
                 <div>
-                  <p className="text-xs text-[#697971]">
+                  <p className="text-xs text-[var(--text-color-muted)]">
                     Approach
                   </p>
 
-                  <p className="text-sm font-bold text-[#10231C]">
+                  <p className="text-sm font-bold text-[var(--color-dark)]">
                     Goal-oriented
                   </p>
                 </div>
@@ -221,11 +221,11 @@ export default function WhyChooseUs() {
             >
               <div className="gold-line mb-5" />
 
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#8D7125]">
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--color-secondary)]">
                 Why Bellis Capital
               </p>
 
-              <h2 className="mt-4 max-w-xl text-4xl font-semibold leading-tight tracking-[-0.03em] text-[#10231C] sm:text-5xl">
+              <h2 className="mt-4 max-w-xl text-4xl font-semibold leading-tight tracking-[-0.03em] text-[var(--color-dark)] sm:text-5xl">
                 Investing is not just about numbers.
                 <span className="gradient-text">
                   {" "}
@@ -233,7 +233,7 @@ export default function WhyChooseUs() {
                 </span>
               </h2>
 
-              <p className="mt-6 max-w-xl text-base leading-7 text-[#697971]">
+              <p className="mt-6 max-w-xl text-base leading-7 text-[var(--text-color-muted)]">
                 A thoughtful investment approach begins by understanding
                 where you are today and where you want to be tomorrow.
                 The right strategy should fit your goals, timeframe and
@@ -265,23 +265,23 @@ export default function WhyChooseUs() {
                       duration: 0.5,
                       delay: index * 0.1,
                     }}
-                    className="group flex gap-5 border-b border-[#E4EBE7] py-6 first:border-t"
+                    className="group flex gap-5 border-b border-[var(--border-color)] py-6 first:border-t"
                   >
-                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#F0F5F2] text-[#0B3D2E] transition-all duration-300 group-hover:bg-[#0B3D2E] group-hover:text-white">
+                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[var(--color-light)] text-[var(--color-dark)] transition-all duration-300 group-hover:bg-[var(--color-dark)] group-hover:text-white">
                       <Icon size={19} />
                     </div>
 
                     <div className="flex-1">
-                      <h3 className="text-base font-semibold text-[#10231C]">
+                      <h3 className="text-base font-semibold text-[var(--color-dark)]">
                         {benefit.title}
                       </h3>
 
-                      <p className="mt-1.5 max-w-lg text-sm leading-6 text-[#697971]">
+                      <p className="mt-1.5 max-w-lg text-sm leading-6 text-[var(--text-color-muted)]">
                         {benefit.description}
                       </p>
                     </div>
 
-                    <div className="hidden h-8 w-8 shrink-0 items-center justify-center rounded-full text-[#B08D28] opacity-0 transition-all duration-300 group-hover:opacity-100 sm:flex">
+                    <div className="hidden h-8 w-8 shrink-0 items-center justify-center rounded-full text-[var(--color-primary)] opacity-0 transition-all duration-300 group-hover:opacity-100 sm:flex">
                       <ArrowUpRight size={17} />
                     </div>
                   </motion.div>
@@ -302,7 +302,7 @@ export default function WhyChooseUs() {
             >
               <a
                 href="/about"
-                className="group inline-flex items-center gap-2 text-sm font-semibold text-[#0B3D2E]"
+                className="group inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-dark)]"
               >
                 Discover our approach
                 <ArrowUpRight

@@ -26,16 +26,16 @@ const fundCategories = [
 
 export default function MutualFundsPage() {
   return (
-    <main className="section-padding min-h-screen bg-[#F8FAF8]">
+    <main className="section-padding min-h-screen bg-[var(--color-light)]">
       <div className="container-width">
         <div className="max-w-2xl">
-          <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#B08D28]">
+          <span className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--color-primary)]">
             Investment Solutions
           </span>
-          <h1 className="mt-3 text-4xl font-bold text-[#10231C] sm:text-5xl">
+          <h1 className="mt-3 text-4xl font-bold text-[var(--color-dark)] sm:text-5xl">
             Explore Mutual Funds
           </h1>
-          <p className="mt-4 text-base text-[#53635C]">
+          <p className="mt-4 text-base text-[var(--text-color-muted)]">
             Choose from diversified fund categories tailored to your risk appetite, time horizon, and financial milestones.
           </p>
         </div>
@@ -44,20 +44,20 @@ export default function MutualFundsPage() {
           {fundCategories.map((fund) => (
             <div
               key={fund.title}
-              className="rounded-2xl border border-[#10231C]/10 bg-white p-7 shadow-sm transition-all hover:border-[#0B3D2E]/30 hover:shadow-md"
+              className="rounded-2xl border border-[var(--color-dark)]/10 bg-white p-7 shadow-sm transition-all hover:border-[var(--color-dark)]/30 hover:shadow-md"
             >
-              <span className="text-xs font-semibold uppercase tracking-wider text-[#B08D28]">
+              <span className="text-xs font-semibold uppercase tracking-wider text-[var(--color-primary)]">
                 {fund.tag}
               </span>
-              <h2 className="mt-2 text-xl font-bold text-[#10231C]">
+              <h2 className="mt-2 text-xl font-bold text-[var(--color-dark)]">
                 {fund.title}
               </h2>
-              <p className="mt-3 text-sm leading-6 text-[#53635C]">
+              <p className="mt-3 text-sm leading-6 text-[var(--text-color-muted)]">
                 {fund.description}
               </p>
               <Link
                 href="/contact"
-                className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-[#0B3D2E] hover:text-[#1B5E48]"
+                className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--color-dark)] hover:text-[var(--color-secondary)]"
               >
                 Consult on this category <ArrowRight size={15} />
               </Link>

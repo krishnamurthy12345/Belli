@@ -28,9 +28,9 @@ const stats = [
 
 export default function Stats() {
   return (
-    <section className="border-y border-[#E4EBE7] bg-white py-8">
+    <section className="border-y border-[var(--border-color)] bg-white py-8">
       <div className="container-width">
-        <div className="grid grid-cols-1 divide-y divide-[#E4EBE7] md:grid-cols-3 md:divide-x md:divide-y-0">
+        <div className="grid grid-cols-1 divide-y divide-[#E2E8F0] md:grid-cols-3 md:divide-x md:divide-y-0">
           {stats.map((stat, index) => {
             const Icon = stat.icon;
 
@@ -46,23 +46,23 @@ export default function Stats() {
                 }}
                 className="flex items-center justify-center gap-4 px-6 py-6 md:py-4"
               >
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#EAF4EE] text-[#0B3D2E]">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[var(--border-color)]/30 text-[var(--color-dark)]">
                   <Icon size={20} />
                 </div>
 
                 <div>
-                  <p className="text-xl font-bold tracking-tight text-[#10231C]">
+                  <p className="text-xl font-bold tracking-tight text-[var(--color-dark)]">
                     {stat.value}
                   </p>
 
-                  <p className="mt-0.5 text-xs font-medium text-[#697971]">
+                  <p className="mt-0.5 text-xs font-medium text-[var(--text-color-muted)]">
                     {stat.label}
                   </p>
                 </div>
 
                 <ArrowUpRight
                   size={16}
-                  className="ml-auto hidden text-[#B08D28] sm:block"
+                  className="ml-auto hidden text-[var(--color-primary)] sm:block"
                 />
               </motion.div>
             );

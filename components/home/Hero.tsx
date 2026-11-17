@@ -3,10 +3,21 @@
 import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowDown, ArrowUpRight, ShieldCheck } from "lucide-react";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 
 export default function InvestmentScene() {
   const containerRef = useRef<HTMLDivElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.defaultMuted = true;
+      videoRef.current.muted = true;
+      videoRef.current.play().catch(() => {
+        // Autoplay policy fallback
+      });
+    }
+  }, []);
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -60,7 +71,7 @@ export default function InvestmentScene() {
         h-[680px]
         w-full
         overflow-hidden
-        bg-[#071C16]
+        bg-[#0B1D31]
         sm:h-[760px]
         lg:h-[820px]
       "
@@ -70,7 +81,7 @@ export default function InvestmentScene() {
       ========================================= */}
 
       <motion.video
-        src="/videos/gold.mp4"
+        ref={videoRef}
         autoPlay
         loop
         muted
@@ -86,17 +97,35 @@ export default function InvestmentScene() {
           w-full
           object-cover
         "
-      />
+      >
+        <source src="/videos/gold.mp4" type="video/mp4" />
+      </motion.video>
 
       {/* =========================================
-          CINEMATIC OVERLAY
+          CINEMATIC OVERLAY (Balanced, Dark & Visible)
       ========================================= */}
 
       <div
         className="
+          pointer-events-none
           absolute
           inset-0
-          bg-[#04130F]/45
+          bg-gradient-to-r
+          from-[#071522]/85
+          via-[#071522]/65
+          to-[#071522]/80
+        "
+      />
+
+      <div
+        className="
+          pointer-events-none
+          absolute
+          inset-0
+          bg-gradient-to-t
+          from-[#0B1D31]
+          via-transparent
+          to-[#071522]/40
         "
       />
 
@@ -115,7 +144,7 @@ export default function InvestmentScene() {
           -translate-x-1/2
           -translate-y-1/2
           rounded-full
-          bg-[#D4AF37]/10
+          bg-[#EF1454]/10
           blur-[120px]
         "
       />
@@ -141,8 +170,8 @@ export default function InvestmentScene() {
           sm:text-[160px]
           lg:text-[220px]
         "
-      >  BELLIS
-        CAPITAL
+      >
+        BELLIS CAPITAL
       </motion.div>
 
       {/* =========================================
@@ -180,21 +209,34 @@ export default function InvestmentScene() {
           transition={{
             duration: 0.8,
           }}
-          className="
-            text-sm
-            font-semibold
-            tracking-[0.3em]
-            text-white
-            sm:text-base
-          "
         >
-          BELLIS
-          <span className="text-[#D4AF37]">
-            {" "}CAPITAL
-          </span>
-        </motion.div>
+          <Link
+            href="/"
+            className="group flex items-center gap-3.5"
+            aria-label="Bellis Capital Home"
+          >
+            <div className="relative flex h-12 w-12 items-center justify-center overflow-hidden rounded-xl border border-[#EF1454]/30 bg-white p-1 shadow-[0_4px_20px_rgba(0,0,0,0.25)] transition-all duration-300 group-hover:scale-105 group-hover:border-[#EF1454]/70">
+              <img
+                src="/images/bellis-logo.jpeg"
+                alt="Bellis Capital Logo"
+                className="h-full w-full object-contain"
+              />
+            </div>
 
-        
+            <div>
+              <div className="text-base font-bold tracking-tight text-white transition-colors duration-300 group-hover:text-[#EF1454] sm:text-lg">
+                BELLIS{" "}
+                <span className="text-[#EF1454]">
+                  CAPITAL
+                </span>
+              </div>
+
+              <div className="text-[9px] font-bold uppercase tracking-[0.22em] text-[#168BD2]">
+                Wealth and Health
+              </div>
+            </div>
+          </Link>
+        </motion.div>
       </div>
 
       {/* =========================================
@@ -220,7 +262,6 @@ export default function InvestmentScene() {
         "
       >
         <div className="max-w-4xl">
-
           {/* Small heading */}
           <motion.div
             initial={{
@@ -246,7 +287,7 @@ export default function InvestmentScene() {
               className="
                 h-px
                 w-10
-                bg-[#D4AF37]
+                bg-[#168BD2]
                 sm:w-16
               "
             />
@@ -257,7 +298,7 @@ export default function InvestmentScene() {
                 font-medium
                 uppercase
                 tracking-[0.28em]
-                text-[#D4AF37]
+                text-[var(--text-color-primary)]
                 sm:text-sm
               "
             >
@@ -306,7 +347,7 @@ export default function InvestmentScene() {
             <span
               className="
                 font-semibold
-                text-[#D4AF37]
+                text-[#EF1454]
               "
             >
               With Purpose.
@@ -385,15 +426,15 @@ export default function InvestmentScene() {
                 justify-center
                 gap-3
                 rounded-full
-                bg-[#D4AF37]
+                bg-[#EF1454]
                 px-7
                 text-sm
                 font-semibold
-                text-[#071C16]
+                text-[#0B1D31]
                 transition-all
                 duration-300
-                hover:bg-[#E5C65A]
-                hover:shadow-[0_0_40px_rgba(212,175,55,0.25)]
+                hover:bg-[#FF4B7E]
+                hover:shadow-[0_0_40px_rgba(239,20,84,0.25)]
               "
             >
               Explore Our Approach
@@ -431,7 +472,7 @@ export default function InvestmentScene() {
                 backdrop-blur-md
                 transition-all
                 duration-300
-                hover:border-[#D4AF37]/50
+                hover:border-[#EF1454]/50
                 hover:bg-white/10
               "
             >
@@ -442,7 +483,7 @@ export default function InvestmentScene() {
                   h-1
                   w-1
                   rounded-full
-                  bg-[#D4AF37]
+                  bg-[#EF1454]
                 "
               />
             </Link>
@@ -473,7 +514,7 @@ export default function InvestmentScene() {
             "
           >
             <ShieldCheck
-              className="h-4 w-4 text-[#D4AF37]"
+              className="h-4 w-4 text-[#168BD2]"
             />
 
             <span>
@@ -537,7 +578,7 @@ export default function InvestmentScene() {
             className="
               h-4
               w-4
-              text-[#D4AF37]
+              text-[#EF1454]
             "
           />
         </motion.div>
@@ -557,7 +598,7 @@ export default function InvestmentScene() {
           z-10
           h-32
           bg-gradient-to-t
-          from-[#071C16]
+          from-[#0B1D31]
           to-transparent
         "
       />

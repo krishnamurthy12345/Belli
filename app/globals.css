@@ -4,21 +4,44 @@
   --background: #F8F9FB;
   --foreground: #162033;
 
-  --primary: #8F1238;
-  --primary-light: #B51F4D;
+  --primary: #EF1454;
+  --primary-light: #FF477A;
 
-  --secondary: #174A72;
-  --secondary-light: #286A99;
+  --secondary: #168BD2;
+  --secondary-light: #2469A7;
 
-  --accent: #C01846;
+  --accent: #EF1454;
 
   --surface: #FFFFFF;
-  --surface-dark: #111827;
+  --surface-dark: #102A43;
 
   --text-primary: #162033;
   --text-secondary: #596579;
 
   --border: #E5E9EF;
+
+  /* Brand Colors (Red and Blue, Dark for text) */
+  --color-primary: #EF1454;
+  --bg-color-primary: #EF1454;
+  --text-color-primary: #EF1454;
+  --border-color-primary: #EF1454;
+
+  --color-secondary: #168BD2;
+  --bg-color-secondary: #168BD2;
+  --text-color-secondary: #168BD2;
+  --border-color-secondary: #168BD2;
+
+  --color-dark: #0b679f;
+  --bg-color-dark: #0b679f;
+  --text-color-dark: #0b679f;
+
+  --color-light: #FFFFFF;
+  --bg-color-light: #F8F9FB;
+  --text-color-light: #FFFFFF;
+
+  --text-color: #162033;
+  --text-color-muted: #596579;
+  --border-color: #E5E9EF;
 }
 
 * {
@@ -52,11 +75,11 @@ a {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f4f2;
+  background: #F1F5FA;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #aab8b1;
+  background: #A8B8C8;
   border-radius: 999px;
 }
 
@@ -86,9 +109,9 @@ a {
 .gradient-text {
   background: linear-gradient(
     120deg,
-    #0b3d2e,
-    #1b5e48,
-    #b08d28
+    #ef1454,
+    #c2114b,
+    #168bd2
   );
   -webkit-background-clip: text;
   background-clip: text;

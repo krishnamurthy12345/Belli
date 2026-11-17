@@ -70,8 +70,8 @@ export default function Navbar() {
 
           rounded-full
           border
-          border-emerald-400/30
-          bg-[#10231C]/95
+          border-rose-500/30
+          bg-[#102A43]/95
 
           text-sm
           font-semibold
@@ -87,24 +87,21 @@ export default function Navbar() {
           duration-300
 
           hover:scale-105
-          hover:border-emerald-400/60
-          hover:bg-[#16382B]
+          hover:border-rose-500/60
+          hover:bg-[#194A78]
         "
       >
         {open ? (
           <X
             size={20}
-            className="text-emerald-400"
+            className="text-rose-500"
           />
         ) : (
           <ChevronDown
             size={20}
-            className="text-emerald-400"
+            className="text-rose-500"
           />
         )}
-
-        {/* Emerald glow */}
-       
       </motion.button>
 
       {/* =====================================================
@@ -163,7 +160,7 @@ export default function Navbar() {
                 border
                 border-white/10
 
-                bg-[#10231C]/95
+                bg-[#102A43]/95
 
                 px-4
                 shadow-2xl
@@ -190,7 +187,7 @@ export default function Navbar() {
               >
                 <div
                   className="
-                    relative flex h-14 w-14 items-center justify-center overflow-hidden rounded-2xl border border-[#D4AF37]/30 bg-white shadow-[0_10px_30px_rgba(0,0,0,0.25)] transition-all duration-300 group-hover:border-[#D4AF37]/70
+                    relative flex h-14 w-14 items-center justify-center overflow-hidden rounded-2xl border border-[#EF1454]/30 bg-white shadow-[0_10px_30px_rgba(0,0,0,0.25)] transition-all duration-300 group-hover:border-[#EF1454]/70
                   "
                 >
                   <img
@@ -209,11 +206,11 @@ export default function Navbar() {
                       text-[15px]
                       font-bold
                       tracking-tight
-                      text-[#dda115]
+                      text-white
                     "
                   >
                     Bellis{" "}
-                    <span className="text-[#dda115]">
+                    <span className="text-[#EF1454]">
                       Capital
                     </span>
                   </p>
@@ -224,7 +221,7 @@ export default function Navbar() {
                       text-[8px]
                       uppercase
                       tracking-[0.2em]
-                      text-white
+                      text-[#168BD2]
                       sm:block
                     "
                   >
@@ -258,7 +255,7 @@ export default function Navbar() {
 
                         ${
                           active
-                            ? "bg-emerald-400/10 text-emerald-300"
+                            ? "bg-rose-500/10 text-rose-400"
                             : "text-white/60 hover:bg-white/5 hover:text-white"
                         }
                       `}
@@ -275,7 +272,7 @@ export default function Navbar() {
                             right-4
                             h-[2px]
                             rounded-full
-                            bg-emerald-400
+                            bg-rose-500
                           "
                         />
                       )}
@@ -355,7 +352,7 @@ export default function Navbar() {
               border
               border-white/10
 
-              bg-[#10231C]/98
+              bg-[#102A43]/98
 
               p-4
 
@@ -397,7 +394,7 @@ export default function Navbar() {
 
                       ${
                         active
-                          ? "bg-emerald-400/10 text-emerald-300"
+                          ? "bg-rose-500/10 text-rose-400"
                           : "text-white/70 hover:bg-white/5 hover:text-white"
                       }
                     `}
@@ -414,7 +411,7 @@ export default function Navbar() {
 
                         ${
                           active
-                            ? "text-emerald-400"
+                            ? "text-rose-500"
                             : "text-white/30 group-hover:translate-x-1 group-hover:text-white"
                         }
                       `}
@@ -447,16 +444,16 @@ export default function Navbar() {
 
                 rounded-xl
 
-                bg-emerald-400
+                bg-rose-500
 
                 text-base
                 font-bold
-                text-[#10231C]
+                text-[#102A43]
 
                 transition-all
                 duration-300
 
-                hover:bg-emerald-300
+                hover:bg-rose-400
                 active:scale-[0.98]
               "
             >

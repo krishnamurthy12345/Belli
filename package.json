@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev --webpack",
     "build": "next build",
+    "postbuild": "node -e \"const fs = require('fs'); fs.copyFileSync('public/web.config', 'out/web.config'); console.log('Successfully copied web.config to out/');\"",
     "start": "next start",
     "lint": "eslint"
   },

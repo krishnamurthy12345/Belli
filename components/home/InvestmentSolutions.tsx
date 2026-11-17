@@ -71,7 +71,7 @@ const solutions = [
 
 export default function InvestmentSolutions() {
   return (
-    <section className="section-padding bg-[#F8FAF8]">
+    <section className="section-padding bg-[var(--color-light)]">
       <div className="container-width">
 
         {/* =====================================================
@@ -98,7 +98,7 @@ export default function InvestmentSolutions() {
           >
             <div className="gold-line mb-5" />
 
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#8D7125]">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--color-secondary)]">
               Investment Solutions
             </p>
 
@@ -110,7 +110,7 @@ export default function InvestmentSolutions() {
                 font-semibold
                 leading-tight
                 tracking-[-0.03em]
-                text-[#10231C]
+                text-[var(--color-dark)]
                 sm:text-5xl
               "
             >
@@ -139,7 +139,7 @@ export default function InvestmentSolutions() {
               max-w-xl
               text-base
               leading-7
-              text-[#697971]
+              text-[var(--text-color-muted)]
               lg:ml-auto
             "
           >
@@ -191,13 +191,13 @@ export default function InvestmentSolutions() {
                     overflow-hidden
                     rounded-[28px]
                     border
-                    border-[#DDE7E1]
+                    border-[var(--border-color)]
                     bg-white
                     transition-all
                     duration-500
                     hover:-translate-y-3
-                    hover:border-[#B8CDBF]
-                    hover:shadow-[0_25px_70px_rgba(16,35,28,0.12)]
+                    hover:border-[var(--border-color)]
+                    hover:shadow-[0_25px_70px_rgba(10,10,10,0.12)]
                   "
                 >
 
@@ -234,8 +234,8 @@ export default function InvestmentSolutions() {
                         absolute
                         inset-0
                         bg-gradient-to-t
-                        from-[#071C16]
-                        via-[#0B3D2E]/35
+                        from-[var(--color-dark)]
+                        via-[var(--color-dark)]/35
                         to-transparent
                         opacity-80
                         transition-opacity
@@ -254,7 +254,7 @@ export default function InvestmentSolutions() {
                         h-40
                         w-40
                         rounded-full
-                        bg-[#D4AF37]/20
+                        bg-[var(--color-primary)]/20
                         opacity-0
                         blur-3xl
                         transition-opacity
@@ -290,16 +290,16 @@ export default function InvestmentSolutions() {
                           rounded-2xl
                           border
                           border-white/20
-                          bg-[#071C16]/60
-                          text-[#D4AF37]
+                          bg-[var(--color-dark)]/60
+                          text-[var(--color-primary)]
                           shadow-lg
                           backdrop-blur-md
                           transition-all
                           duration-500
                           group-hover:scale-110
-                          group-hover:border-[#D4AF37]/50
-                          group-hover:bg-[#D4AF37]
-                          group-hover:text-[#071C16]
+                          group-hover:border-[var(--color-primary)]/50
+                          group-hover:bg-[var(--color-primary)]
+                          group-hover:text-[var(--color-dark)]
                         "
                       >
                         <Icon size={21} />
@@ -322,9 +322,9 @@ export default function InvestmentSolutions() {
                           backdrop-blur-md
                           transition-all
                           duration-500
-                          group-hover:border-[#D4AF37]
-                          group-hover:bg-[#D4AF37]
-                          group-hover:text-[#071C16]
+                          group-hover:border-[var(--color-primary)]
+                          group-hover:bg-[var(--color-primary)]
+                          group-hover:text-[var(--color-dark)]
                         "
                       >
                         <ArrowUpRight
@@ -358,7 +358,7 @@ export default function InvestmentSolutions() {
                           font-semibold
                           uppercase
                           tracking-[0.22em]
-                          text-[#D4AF37]
+                          text-[var(--color-primary)]
                         "
                       >
                         Bellis Capital
@@ -395,7 +395,7 @@ export default function InvestmentSolutions() {
                         mb-5
                         h-[2px]
                         w-10
-                        bg-[#D4AF37]
+                        bg-[var(--color-primary)]
                         transition-all
                         duration-500
                         group-hover:w-20
@@ -406,7 +406,7 @@ export default function InvestmentSolutions() {
                       className="
                         text-sm
                         leading-6
-                        text-[#697971]
+                        text-[var(--text-color-muted)]
                       "
                     >
                       {solution.description}
@@ -428,7 +428,7 @@ export default function InvestmentSolutions() {
                           font-semibold
                           uppercase
                           tracking-[0.16em]
-                          text-[#0B3D2E]
+                          text-[var(--color-dark)]
                         "
                       >
                         Explore
@@ -438,7 +438,7 @@ export default function InvestmentSolutions() {
                         className="
                           text-xs
                           font-medium
-                          text-[#8D7125]
+                          text-[var(--color-secondary)]
                           transition-transform
                           duration-300
                           group-hover:translate-x-1
@@ -460,7 +460,7 @@ export default function InvestmentSolutions() {
                       left-0
                       h-[2px]
                       w-0
-                      bg-[#D4AF37]
+                      bg-[var(--color-primary)]
                       transition-all
                       duration-500
                       group-hover:w-full
@@ -499,20 +499,20 @@ export default function InvestmentSolutions() {
             text-center
           "
         >
-          <div className="h-px w-8 bg-[#D4AF37]/50" />
+          <div className="h-px w-8 bg-[var(--color-primary)]/50" />
 
           <p
             className="
               text-xs
               uppercase
               tracking-[0.16em]
-              text-[#8A968F]
+              text-[var(--text-color-muted)]
             "
           >
             Designed around your financial journey
           </p>
 
-          <div className="h-px w-8 bg-[#D4AF37]/50" />
+          <div className="h-px w-8 bg-[var(--color-primary)]/50" />
         </motion.div>
       </div>
     </section>

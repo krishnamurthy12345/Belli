@@ -39,9 +39,9 @@ export default function WhyBellis() {
             transition={{ duration: 0.7 }}
             className="relative"
           >
-            <div className="relative min-h-[450px] overflow-hidden rounded-[32px] bg-[#0B3D2E] p-8 sm:p-10">
+            <div className="relative min-h-[450px] overflow-hidden rounded-[32px] bg-[var(--color-dark)] p-8 sm:p-10">
               <div className="absolute right-[-80px] top-[-80px] h-64 w-64 rounded-full border border-white/10" />
-              <div className="absolute bottom-[-100px] left-[-100px] h-72 w-72 rounded-full border border-[#D4AF37]/10" />
+              <div className="absolute bottom-[-100px] left-[-100px] h-72 w-72 rounded-full border border-[var(--color-primary)]/10" />
 
               {/* Grid */}
               <div className="absolute inset-0 opacity-[0.06]">
@@ -57,7 +57,7 @@ export default function WhyBellis() {
 
               <div className="relative flex h-full min-h-[370px] flex-col justify-between">
                 <div>
-                  <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#D4AF37]">
+                  <p className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--color-primary)]">
                     The Bellis Approach
                   </p>
 
@@ -79,7 +79,7 @@ export default function WhyBellis() {
                       key={step}
                       className="flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 px-4 py-3"
                     >
-                      <span className="text-xs font-bold text-[#D4AF37]">
+                      <span className="text-xs font-bold text-[var(--color-primary)]">
                         0{index + 1}
                       </span>
 
@@ -107,18 +107,18 @@ export default function WhyBellis() {
             <div className="mb-5 flex items-center gap-3">
               <span className="gold-line" />
 
-              <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#B08D28]">
+              <span className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--color-primary)]">
                 Why Bellis
               </span>
             </div>
 
-            <h2 className="text-4xl font-bold leading-tight tracking-tight text-[#10231C] sm:text-5xl">
+            <h2 className="text-4xl font-bold leading-tight tracking-tight text-[var(--color-dark)] sm:text-5xl">
               More than an investment.
               <br />
               <span className="gradient-text">A relationship.</span>
             </h2>
 
-            <p className="mt-6 text-base leading-7 text-[#53635C]">
+            <p className="mt-6 text-base leading-7 text-[var(--text-color-muted)]">
               The right investment journey is not only about selecting
               products. It is about having a clear process and staying
               connected to the goals behind your money.
@@ -133,16 +133,16 @@ export default function WhyBellis() {
                     key={point.title}
                     className="flex gap-4"
                   >
-                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#EAF4EE] text-[#0B3D2E]">
+                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[var(--border-color)]/30 text-[var(--color-dark)]">
                       <Icon size={20} />
                     </div>
 
                     <div>
-                      <h3 className="font-bold text-[#10231C]">
+                      <h3 className="font-bold text-[var(--color-dark)]">
                         {point.title}
                       </h3>
 
-                      <p className="mt-1 text-sm leading-6 text-[#697971]">
+                      <p className="mt-1 text-sm leading-6 text-[var(--text-color-muted)]">
                         {point.text}
                       </p>
                     </div>
@@ -151,7 +151,7 @@ export default function WhyBellis() {
               })}
             </div>
 
-            <div className="mt-9 flex items-center gap-2 text-sm font-medium text-[#0B3D2E]">
+            <div className="mt-9 flex items-center gap-2 text-sm font-medium text-[var(--color-dark)]">
               <CheckCircle2 size={18} />
               Goal-focused. Transparent. Long-term.
             </div>

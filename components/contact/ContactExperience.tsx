@@ -107,7 +107,7 @@ export default function ContactExperience() {
   };
 
   return (
-    <main className="min-h-screen overflow-hidden bg-[#F8FAF8]">
+    <main className="min-h-screen overflow-hidden bg-[var(--color-light)]">
 
       <ToastContainer position="top-right" autoClose={3000} hideProgressBar={false}
         newestOnTop
@@ -120,16 +120,16 @@ export default function ContactExperience() {
       {/* HERO */}
       {/* ========================================================= */}
 
-      <section className="relative overflow-hidden bg-[#0B3D2E] pt-32">
+      <section className="relative overflow-hidden bg-[var(--color-dark)] pt-32">
         {/* Background glow */}
-        <div className="pointer-events-none absolute -left-40 top-20 h-[500px] w-[500px] rounded-full bg-[#1B5E48]/30 blur-[130px]" />
+        <div className="pointer-events-none absolute -left-40 top-20 h-[500px] w-[500px] rounded-full bg-[var(--color-secondary)]/30 blur-[130px]" />
 
-        <div className="pointer-events-none absolute -right-40 bottom-0 h-[500px] w-[500px] rounded-full bg-[#D4AF37]/10 blur-[130px]" />
+        <div className="pointer-events-none absolute -right-40 bottom-0 h-[500px] w-[500px] rounded-full bg-[var(--color-primary)]/10 blur-[130px]" />
 
-        <div className="pointer-events-none absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#0B3D2E]/50 blur-[140px]" />
+        <div className="pointer-events-none absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[var(--color-dark)]/50 blur-[140px]" />
 
         {/* Decorative dots */}
-        <div className="pointer-events-none absolute left-[8%] top-[30%] h-2 w-2 rounded-full bg-[#D4AF37] shadow-[0_0_20px_rgba(212,175,55,0.8)]" />
+        <div className="pointer-events-none absolute left-[8%] top-[30%] h-2 w-2 rounded-full bg-[var(--color-primary)] shadow-[0_0_20px_rgba(227,0,69,0.8)]" />
 
         <div className="pointer-events-none absolute right-[15%] top-[20%] h-1.5 w-1.5 rounded-full bg-white/40" />
 
@@ -155,9 +155,9 @@ export default function ContactExperience() {
             >
               {/* Label */}
               <div className="flex items-center gap-3">
-                <span className="h-[2px] w-10 bg-[#D4AF37]" />
+                <span className="h-[2px] w-10 bg-[var(--color-primary)]" />
 
-                <span className="text-xs font-bold uppercase tracking-[0.24em] text-[#D4AF37]">
+                <span className="text-xs font-bold uppercase tracking-[0.24em] text-[var(--color-primary)]">
                   Let&apos;s Connect
                 </span>
               </div>
@@ -168,7 +168,7 @@ export default function ContactExperience() {
                 <br />
                 financial chapter
                 <br />
-                <span className="text-[#D4AF37]">starts here.</span>
+                <span className="text-[var(--color-primary)]">starts here.</span>
               </h1>
 
               {/* Description */}
@@ -183,7 +183,7 @@ export default function ContactExperience() {
               <div className="mt-9 flex flex-wrap gap-3">
                 <a
                   href="#contact-details"
-                  className="group inline-flex items-center gap-2 rounded-full bg-[#D4AF37] px-7 py-4 text-sm font-bold text-[#10231C] transition-all duration-300 hover:-translate-y-1 hover:bg-[#E4C65B]"
+                  className="group inline-flex items-center gap-2 rounded-full bg-[var(--color-primary)] px-7 py-4 text-sm font-bold text-[var(--color-dark)] transition-all duration-300 hover:-translate-y-1 hover:opacity-90"
                 >
                   Start a Conversation
                   <ArrowRight
@@ -203,7 +203,7 @@ export default function ContactExperience() {
 
               {/* Trust line */}
               <div className="mt-8 flex items-center gap-3">
-                <div className="h-2 w-2 rounded-full bg-[#D4AF37] shadow-[0_0_12px_rgba(212,175,55,0.7)]" />
+                <div className="h-2 w-2 rounded-full bg-[var(--color-primary)] shadow-[0_0_12px_rgba(227,0,69,0.7)]" />
 
                 <p className="text-xs uppercase tracking-[0.18em] text-white/35">
                   Wealth • Strategy • Clarity
@@ -232,10 +232,11 @@ export default function ContactExperience() {
               }}
               className="relative flex min-h-[430px] items-center justify-center sm:min-h-[520px]"
             >
-              {/* Large ambient glow */}
-              <div className="absolute h-[360px] w-[360px] rounded-full bg-[#D4AF37]/10 blur-[100px]" />
+              {/* Vibrant Ambient Red Glow */}
+              <div className="absolute h-[380px] w-[380px] rounded-full bg-[var(--color-primary)]/25 blur-[120px]" />
+              <div className="absolute h-[240px] w-[240px] rounded-full bg-[var(--color-primary)]/35 blur-[70px]" />
 
-              {/* Outer rotating ring */}
+              {/* Outer rotating ring (Vibrant Red) */}
               <motion.div
                 animate={{
                   rotate: 360
@@ -245,14 +246,16 @@ export default function ContactExperience() {
                   repeat: Infinity,
                   ease: "linear"
                 }}
-                className="absolute h-[370px] w-[370px] rounded-full border border-[#D4AF37]/20 sm:h-[450px] sm:w-[450px]"
+                className="absolute h-[370px] w-[370px] rounded-full border-2 border-[var(--color-primary)]/60 shadow-[0_0_30px_rgba(239,20,84,0.18)] sm:h-[460px] sm:w-[460px]"
               >
-                <span className="absolute -left-2 top-1/2 h-4 w-4 rounded-full bg-[#D4AF37] shadow-[0_0_25px_rgba(212,175,55,0.8)]" />
+                {/* Glowing Red Planet 1 */}
+                <span className="absolute -left-2.5 top-1/2 h-5 w-5 -translate-y-1/2 rounded-full bg-[var(--color-primary)] shadow-[0_0_25px_var(--color-primary),0_0_50px_var(--color-primary)] ring-4 ring-[var(--color-primary)]/30" />
 
-                <span className="absolute -right-1 top-[28%] h-2.5 w-2.5 rounded-full bg-white/50" />
+                {/* Satellite 1 */}
+                <span className="absolute -right-1 top-[28%] h-3 w-3 rounded-full bg-[var(--color-primary)] shadow-[0_0_15px_var(--color-primary)] ring-2 ring-white/50" />
               </motion.div>
 
-              {/* Middle ring */}
+              {/* Middle ring (Vibrant Red) */}
               <motion.div
                 animate={{
                   rotate: -360
@@ -262,12 +265,15 @@ export default function ContactExperience() {
                   repeat: Infinity,
                   ease: "linear"
                 }}
-                className="absolute h-[280px] w-[280px] rounded-full border border-white/10 sm:h-[340px] sm:w-[340px]"
+                className="absolute h-[280px] w-[280px] rounded-full border border-[var(--color-primary)]/50 sm:h-[350px] sm:w-[350px]"
               >
-                <span className="absolute right-[12%] top-1/2 h-3 w-3 rounded-full bg-[#D4AF37] shadow-[0_0_18px_rgba(212,175,55,0.7)]" />
+                {/* Glowing Red Planet 2 */}
+                <span className="absolute right-[10%] top-1/2 h-4 w-4 -translate-y-1/2 rounded-full bg-[var(--color-primary)] shadow-[0_0_20px_var(--color-primary)] ring-2 ring-white/70" />
+
+                <span className="absolute left-[15%] bottom-[20%] h-2 w-2 rounded-full bg-white shadow-[0_0_10px_white]" />
               </motion.div>
 
-              {/* Inner ring */}
+              {/* Inner ring (Vibrant Red) */}
               <motion.div
                 animate={{
                   rotate: 360
@@ -277,9 +283,10 @@ export default function ContactExperience() {
                   repeat: Infinity,
                   ease: "linear"
                 }}
-                className="absolute h-[190px] w-[190px] rounded-full border border-[#D4AF37]/30 sm:h-[230px] sm:w-[230px]"
+                className="absolute h-[190px] w-[190px] rounded-full border-2 border-[var(--color-primary)]/70 sm:h-[240px] sm:w-[240px]"
               >
-                <span className="absolute left-[10%] top-[15%] h-2 w-2 rounded-full bg-[#D4AF37]" />
+                {/* Fast Orb */}
+                <span className="absolute left-[12%] top-[15%] h-3 w-3 rounded-full bg-[var(--color-primary)] shadow-[0_0_15px_var(--color-primary)]" />
               </motion.div>
 
               {/* Central card */}
@@ -292,13 +299,13 @@ export default function ContactExperience() {
                   repeat: Infinity,
                   ease: "easeInOut"
                 }}
-                className="relative z-10 flex h-[190px] w-[190px] flex-col items-center justify-center rounded-full border border-[#D4AF37]/40 bg-[#10231C]/90 shadow-[0_0_80px_rgba(212,175,55,0.12)] backdrop-blur-xl sm:h-[220px] sm:w-[220px]"
+                className="relative z-10 flex h-[190px] w-[190px] flex-col items-center justify-center rounded-full border-2 border-[var(--color-primary)] bg-[var(--color-dark)] shadow-[0_0_60px_rgba(239,20,84,0.35)] backdrop-blur-xl sm:h-[220px] sm:w-[220px]"
               >
-                {/* Inner glow */}
-                <div className="absolute inset-5 rounded-full bg-[#0B3D2E] shadow-inner" />
+                {/* Inner red glow */}
+                <div className="absolute inset-4 rounded-full border border-[var(--color-primary)]/30 bg-[var(--color-primary)]/10 shadow-inner" />
 
                 <div className="relative z-10 text-center">
-                  <p className="text-[9px] font-bold uppercase tracking-[0.3em] text-[#D4AF37]">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-[var(--color-primary)]">
                     Bellis
                   </p>
 
@@ -306,9 +313,9 @@ export default function ContactExperience() {
                     Capital
                   </p>
 
-                  <div className="mx-auto mt-4 h-px w-10 bg-[#D4AF37]" />
+                  <div className="mx-auto mt-4 h-px w-10 bg-[var(--color-primary)]" />
 
-                  <p className="mt-3 text-[8px] uppercase tracking-[0.22em] text-white/40">
+                  <p className="mt-3 text-[8px] uppercase tracking-[0.22em] text-white/50">
                     Wealth • Strategy
                   </p>
                 </div>
@@ -353,7 +360,7 @@ export default function ContactExperience() {
                   duration: 0.7,
                   delay: 1.05
                 }}
-                className="absolute bottom-[8%] left-0 z-20 rounded-2xl border border-white/10 bg-[#10231C]/90 px-5 py-4 shadow-2xl backdrop-blur-xl"
+                className="absolute bottom-[8%] left-0 z-20 rounded-2xl border border-white/10 bg-[var(--color-dark)]/90 px-5 py-4 shadow-2xl backdrop-blur-xl"
               >
                 <p className="text-[9px] uppercase tracking-[0.2em] text-white/35">
                   Bellis Capital
@@ -372,7 +379,7 @@ export default function ContactExperience() {
       {/* CONTACT DETAILS & REQUEST FORM */}
       {/* ========================================================= */}
 
-      <section id="contact-details" className="section-padding bg-[#F8FAF8]">
+      <section id="contact-details" className="section-padding bg-[var(--color-light)]">
         <div className="container-width">
           <div className="grid gap-12 lg:grid-cols-[0.7fr_1.3fr]">
             {/* Left: Contact Info */}
@@ -382,17 +389,17 @@ export default function ContactExperience() {
               viewport={{ once: true, amount: 0.3 }}
             >
               <div className="gold-line" />
-              <p className="mt-5 text-xs font-bold uppercase tracking-[0.2em] text-[#0B3D2E]/50">
+              <p className="mt-5 text-xs font-bold uppercase tracking-[0.2em] text-[var(--color-dark)]/50">
                 Contact Details
               </p>
 
-              <h2 className="mt-4 text-4xl font-bold tracking-[-0.04em] text-[#10231C] sm:text-5xl">
+              <h2 className="mt-4 text-4xl font-bold tracking-[-0.04em] text-[var(--color-dark)] sm:text-5xl">
                 Let&apos;s make the
                 <br />
-                <span className="text-[#0B3D2E]">conversation useful.</span>
+                <span className="text-[var(--color-dark)]">conversation useful.</span>
               </h2>
 
-              <p className="mt-5 max-w-md text-sm leading-7 text-[#53635C]">
+              <p className="mt-5 max-w-md text-sm leading-7 text-[var(--text-color-muted)]">
                 Use the details below to connect with the Bellis Capital team
                 and begin a conversation around your financial goals.
               </p>
@@ -409,16 +416,16 @@ export default function ContactExperience() {
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.4, delay: index * 0.1 }}
-                      className="group flex items-center gap-4 rounded-2xl border border-[#E4EBE7] bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#D4AF37]/50 hover:shadow-md"
+                      className="group flex items-center gap-4 rounded-2xl border border-[var(--border-color)] bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[var(--color-primary)]/50 hover:shadow-md"
                     >
-                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#0B3D2E] text-[#D4AF37] transition-all group-hover:bg-[#D4AF37] group-hover:text-[#10231C]">
+                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[var(--color-dark)] text-[var(--color-primary)] transition-all group-hover:bg-[var(--color-primary)] group-hover:text-[var(--color-dark)]">
                         <Icon size={20} />
                       </div>
                       <div>
-                        <p className="text-[10px] font-bold uppercase tracking-wider text-[#53635C]/60">
+                        <p className="text-[10px] font-bold uppercase tracking-wider text-[var(--text-color-muted)]/60">
                           {item.label}
                         </p>
-                        <p className="text-sm font-semibold text-[#10231C]">
+                        <p className="text-sm font-semibold text-[var(--color-dark)]">
                           {item.value}
                         </p>
                       </div>
@@ -433,9 +440,9 @@ export default function ContactExperience() {
                   href="https://wa.me/919488974620"
                   target="_blank"
                   rel="noreferrer"
-                  className="group inline-flex items-center gap-2 rounded-xl bg-[#0B3D2E] px-5 py-3 text-xs font-bold uppercase tracking-[0.12em] text-white transition-all duration-300 hover:-translate-y-1 hover:bg-[#123F31]"
+                  className="group inline-flex items-center gap-2 rounded-xl bg-[var(--color-dark)] px-5 py-3 text-xs font-bold uppercase tracking-[0.12em] text-white transition-all duration-300 hover:-translate-y-1 hover:bg-[var(--color-secondary)]"
                 >
-                  <MessageCircle size={16} className="text-[#D4AF37]" />
+                  <MessageCircle size={16} className="text-[var(--color-primary)]" />
                   WhatsApp
                 </a>
 
@@ -444,7 +451,7 @@ export default function ContactExperience() {
                   target="_blank"
                   rel="noreferrer"
                   aria-label="Bellis Capital YouTube"
-                  className="flex h-11 w-11 items-center justify-center rounded-xl border border-[#E4EBE7] bg-white text-[#53635C] shadow-sm transition-all hover:bg-[#0B3D2E] hover:text-[#D4AF37]"
+                  className="flex h-11 w-11 items-center justify-center rounded-xl border border-[var(--border-color)] bg-white text-[var(--text-color-muted)] shadow-sm transition-all hover:bg-[var(--color-dark)] hover:text-[var(--color-primary)]"
                 >
                   <svg className="h-5 w-5 fill-current" viewBox="0 0 24 24">
                     <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
@@ -456,7 +463,7 @@ export default function ContactExperience() {
                   target="_blank"
                   rel="noreferrer"
                   aria-label="LinkedIn"
-                  className="flex h-11 w-11 items-center justify-center rounded-xl border border-[#E4EBE7] bg-white text-[#53635C] shadow-sm transition-all hover:bg-[#0B3D2E] hover:text-[#D4AF37]"
+                  className="flex h-11 w-11 items-center justify-center rounded-xl border border-[var(--border-color)] bg-white text-[var(--text-color-muted)] shadow-sm transition-all hover:bg-[var(--color-dark)] hover:text-[var(--color-primary)]"
                 >
                   <svg className="h-5 w-5 fill-current" viewBox="0 0 24 24">
                     <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.762 2.239 5 5 5h14c2.762 0 5-2.238 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
@@ -468,7 +475,7 @@ export default function ContactExperience() {
                   target="_blank"
                   rel="noreferrer"
                   aria-label="Bellis Capital Instagram"
-                  className="flex h-11 w-11 items-center justify-center rounded-xl border border-[#E4EBE7] bg-white text-[#53635C] shadow-sm transition-all hover:bg-[#0B3D2E] hover:text-[#D4AF37]"
+                  className="flex h-11 w-11 items-center justify-center rounded-xl border border-[var(--border-color)] bg-white text-[var(--text-color-muted)] shadow-sm transition-all hover:bg-[var(--color-dark)] hover:text-[var(--color-primary)]"
                 >
                   <svg
                     className="h-5 w-5 fill-current"
@@ -487,15 +494,15 @@ export default function ContactExperience() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.6 }}
-              className="rounded-[28px] border border-[#E4EBE7] bg-white p-8 shadow-[0_20px_50px_rgba(16,35,28,0.06)] sm:p-10"
+              className="rounded-[28px] border border-[var(--border-color)] bg-white p-8 shadow-[0_20px_50px_rgba(10,10,10,0.06)] sm:p-10"
             >
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#0B3D2E]">
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--color-dark)]">
                 Begin Your Journey
               </p>
-              <h3 className="mt-2 text-2xl font-bold text-[#10231C] sm:text-3xl">
+              <h3 className="mt-2 text-2xl font-bold text-[var(--color-dark)] sm:text-3xl">
                 Request an Advisory Call
               </h3>
-              <p className="mt-1 text-xs text-[#53635C]">
+              <p className="mt-1 text-xs text-[var(--text-color-muted)]">
                 Share a few details and our team will connect with you.
               </p>
 
@@ -504,7 +511,7 @@ export default function ContactExperience() {
                 className="mt-6 flex flex-col gap-4"
               >
                 <div>
-                  <label className="block text-[10px] font-bold uppercase tracking-wider text-[#53635C]">
+                  <label className="block text-[10px] font-bold uppercase tracking-wider text-[var(--text-color-muted)]">
                     Full Name
                   </label>
                   <input
@@ -514,13 +521,13 @@ export default function ContactExperience() {
                     onChange={handleChange}
                     placeholder="John Doe"
                     required
-                    className="mt-1 w-full rounded-xl border border-[#E4EBE7] bg-[#F8FAF8] px-4 py-3 text-sm text-[#10231C] outline-none transition-all placeholder:text-[#53635C]/40 focus:border-[#D4AF37] focus:bg-white"
+                    className="mt-1 w-full rounded-xl border border-[var(--border-color)] bg-[var(--color-light)] px-4 py-3 text-sm text-[var(--color-dark)] outline-none transition-all placeholder:text-[var(--text-color-muted)]/40 focus:border-[var(--color-primary)] focus:bg-white"
                   />
                 </div>
 
                 <div className="grid gap-4 sm:grid-cols-2">
                   <div>
-                    <label className="block text-[10px] font-bold uppercase tracking-wider text-[#53635C]">
+                    <label className="block text-[10px] font-bold uppercase tracking-wider text-[var(--text-color-muted)]">
                       Phone Number
                     </label>
                     <input
@@ -530,11 +537,11 @@ export default function ContactExperience() {
                       onChange={handleChange}
                       placeholder="+91 98765 43210"
                       required
-                      className="mt-1 w-full rounded-xl border border-[#E4EBE7] bg-[#F8FAF8] px-4 py-3 text-sm text-[#10231C] outline-none transition-all placeholder:text-[#53635C]/40 focus:border-[#D4AF37] focus:bg-white"
+                      className="mt-1 w-full rounded-xl border border-[var(--border-color)] bg-[var(--color-light)] px-4 py-3 text-sm text-[var(--color-dark)] outline-none transition-all placeholder:text-[var(--text-color-muted)]/40 focus:border-[var(--color-primary)] focus:bg-white"
                     />
                   </div>
                   <div>
-                    <label className="block text-[10px] font-bold uppercase tracking-wider text-[#53635C]">
+                    <label className="block text-[10px] font-bold uppercase tracking-wider text-[var(--text-color-muted)]">
                       Email Address
                     </label>
                     <input
@@ -544,13 +551,13 @@ export default function ContactExperience() {
                       onChange={handleChange}
                       placeholder="john@example.com"
                       required
-                      className="mt-1 w-full rounded-xl border border-[#E4EBE7] bg-[#F8FAF8] px-4 py-3 text-sm text-[#10231C] outline-none transition-all placeholder:text-[#53635C]/40 focus:border-[#D4AF37] focus:bg-white"
+                      className="mt-1 w-full rounded-xl border border-[var(--border-color)] bg-[var(--color-light)] px-4 py-3 text-sm text-[var(--color-dark)] outline-none transition-all placeholder:text-[var(--text-color-muted)]/40 focus:border-[var(--color-primary)] focus:bg-white"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-[10px] font-bold uppercase tracking-wider text-[#53635C]">
+                  <label className="block text-[10px] font-bold uppercase tracking-wider text-[var(--text-color-muted)]">
                     Requirements
                   </label>
                   <textarea
@@ -560,12 +567,12 @@ export default function ContactExperience() {
                     onChange={handleChange}
                     placeholder="Tell us your financial requirements..."
                     required
-                    className="mt-1 w-full rounded-xl border border-[#E4EBE7] bg-[#F8FAF8] px-4 py-3 text-sm text-[#10231C] outline-none transition-all placeholder:text-[#53635C]/40 focus:border-[#D4AF37] focus:bg-white"
+                    className="mt-1 w-full rounded-xl border border-[var(--border-color)] bg-[var(--color-light)] px-4 py-3 text-sm text-[var(--color-dark)] outline-none transition-all placeholder:text-[var(--text-color-muted)]/40 focus:border-[var(--color-primary)] focus:bg-white"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-[10px] font-bold uppercase tracking-wider text-[#53635C]">
+                  <label className="block text-[10px] font-bold uppercase tracking-wider text-[var(--text-color-muted)]">
                     Comments
                   </label>
                   <textarea
@@ -574,18 +581,18 @@ export default function ContactExperience() {
                     value={formData.comments}
                     onChange={handleChange}
                     placeholder="Add any additional comments..."
-                    className="mt-1 w-full rounded-xl border border-[#E4EBE7] bg-[#F8FAF8] px-4 py-3 text-sm text-[#10231C] outline-none transition-all placeholder:text-[#53635C]/40 focus:border-[#D4AF37] focus:bg-white"
+                    className="mt-1 w-full rounded-xl border border-[var(--border-color)] bg-[var(--color-light)] px-4 py-3 text-sm text-[var(--color-dark)] outline-none transition-all placeholder:text-[var(--text-color-muted)]/40 focus:border-[var(--color-primary)] focus:bg-white"
                   />
                 </div>
 
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="mt-2 inline-flex items-center justify-center gap-2 rounded-xl bg-[#0B3D2E] py-4 text-sm font-bold text-white transition-all duration-300 hover:bg-[#123F31] hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-70"
+                  className="mt-2 inline-flex items-center justify-center gap-2 rounded-xl bg-[var(--color-dark)] py-4 text-sm font-bold text-white transition-all duration-300 hover:bg-[var(--color-secondary)] hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-70"
                 >
                   {isSubmitting ? "Submitting..." : "Submit Request"}
 
-                  <Send size={15} className="text-[#D4AF37]" />
+                  <Send size={15} className="text-[var(--color-primary)]" />
                 </button>
               </form>
             </motion.div>
@@ -597,10 +604,10 @@ export default function ContactExperience() {
       {/* CTA */}
       {/* ========================================================= */}
 
-      <section className="relative overflow-hidden bg-[#10231C] py-24">
-        <div className="pointer-events-none absolute left-1/2 top-0 h-[300px] w-[500px] -translate-x-1/2 rounded-full bg-[#1B5E48]/30 blur-[120px]" />
+      <section className="relative overflow-hidden bg-[var(--color-dark)] py-24">
+        <div className="pointer-events-none absolute left-1/2 top-0 h-[300px] w-[500px] -translate-x-1/2 rounded-full bg-[var(--color-secondary)]/30 blur-[120px]" />
 
-        <div className="pointer-events-none absolute bottom-[-150px] right-[-100px] h-[350px] w-[350px] rounded-full bg-[#D4AF37]/[0.06] blur-[100px]" />
+        <div className="pointer-events-none absolute bottom-[-150px] right-[-100px] h-[350px] w-[350px] rounded-full bg-[var(--color-primary)]/[0.06] blur-[100px]" />
 
         <div className="container-width relative text-center">
           <motion.div
@@ -616,7 +623,7 @@ export default function ContactExperience() {
               once: true
             }}
           >
-            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#D4AF37]">
+            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[var(--color-primary)]">
               Begin with clarity
             </p>
 
@@ -631,7 +638,7 @@ export default function ContactExperience() {
 
             <a
               href="mailto:belliscapitalofficial@gmail.com"
-              className="mt-9 inline-flex items-center gap-2 rounded-full bg-[#D4AF37] px-7 py-4 text-sm font-bold text-[#10231C] transition-all duration-300 hover:-translate-y-1 hover:bg-[#E4C65B]"
+              className="mt-9 inline-flex items-center gap-2 rounded-full bg-[var(--color-primary)] px-7 py-4 text-sm font-bold text-[var(--color-dark)] transition-all duration-300 hover:-translate-y-1 hover:opacity-90"
             >
               Get in Touch
               <ArrowRight size={17} />

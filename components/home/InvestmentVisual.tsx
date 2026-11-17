@@ -28,8 +28,8 @@ const cards = [
 
 export default function InvestmentVisual() {
   return (
-    <section className="section-padding relative overflow-hidden bg-[#F8FAF8]">
-      <div className="pointer-events-none absolute left-[-180px] top-1/3 h-[400px] w-[400px] rounded-full bg-[#0B3D2E]/[0.04] blur-[100px]" />
+    <section className="section-padding relative overflow-hidden bg-[var(--color-light)]">
+      <div className="pointer-events-none absolute left-[-180px] top-1/3 h-[400px] w-[400px] rounded-full bg-[var(--color-dark)]/[0.04] blur-[100px]" />
 
       <div className="container-width">
         <div className="grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
@@ -52,7 +52,7 @@ export default function InvestmentVisual() {
             }}
             className="relative"
           >
-            <div className="relative aspect-[4/3] overflow-hidden rounded-[32px] bg-[#0B3D2E]">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-[32px] bg-[var(--color-dark)]">
               <div
                 className="absolute inset-0 bg-cover bg-center"
                 style={{
@@ -61,9 +61,9 @@ export default function InvestmentVisual() {
                 }}
               />
 
-              <div className="absolute inset-0 bg-[#0B3D2E]/55" />
+              <div className="absolute inset-0 bg-[var(--color-dark)]/55" />
 
-              <div className="absolute inset-0 bg-gradient-to-br from-[#0B3D2E]/20 via-transparent to-[#10231C]/90" />
+              <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-dark)]/20 via-transparent to-[var(--color-dark)]/90" />
 
               {/* ANIMATED GRID */}
               <motion.div
@@ -95,7 +95,7 @@ export default function InvestmentVisual() {
                 <motion.path
                   d="M0 250 C70 240 90 205 145 215 C205 230 215 160 275 170 C335 180 350 90 405 110 C440 120 455 55 500 25"
                   fill="none"
-                  stroke="#D4AF37"
+                  stroke="var(--color-primary)"
                   strokeWidth="3"
                   strokeLinecap="round"
                   initial={{
@@ -115,7 +115,7 @@ export default function InvestmentVisual() {
               </svg>
 
               {/* GLOW */}
-              <div className="absolute bottom-12 right-10 h-32 w-32 rounded-full bg-[#D4AF37]/20 blur-3xl" />
+              <div className="absolute bottom-12 right-10 h-32 w-32 rounded-full bg-[var(--color-primary)]/20 blur-3xl" />
 
               <div className="absolute bottom-7 left-7">
                 <p className="text-[10px] uppercase tracking-[0.2em] text-white/40">
@@ -138,10 +138,10 @@ export default function InvestmentVisual() {
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
-              className="absolute -bottom-6 right-6 rounded-2xl border border-white/10 bg-[#10231C] p-5 shadow-2xl sm:right-10"
+              className="absolute -bottom-6 right-6 rounded-2xl border border-white/10 bg-[var(--color-dark)] p-5 shadow-2xl sm:right-10"
             >
               <div className="flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#D4AF37] text-[#10231C]">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[var(--color-primary)] text-[var(--color-dark)]">
                   <ArrowUpRight size={18} />
                 </div>
 
@@ -175,20 +175,20 @@ export default function InvestmentVisual() {
             >
               <div className="gold-line" />
 
-              <p className="mt-5 text-xs font-bold uppercase tracking-[0.22em] text-[#0B3D2E]/50">
+              <p className="mt-5 text-xs font-bold uppercase tracking-[0.22em] text-[var(--color-dark)]/50">
                 Investing with intention
               </p>
 
-              <h2 className="mt-4 text-4xl font-bold leading-[1.05] tracking-[-0.04em] text-[#10231C] sm:text-5xl">
+              <h2 className="mt-4 text-4xl font-bold leading-[1.05] tracking-[-0.04em] text-[var(--color-dark)] sm:text-5xl">
                 Your money should
                 <br />
                 have a
-                <span className="text-[#0B3D2E]">
+                <span className="text-[var(--color-dark)]">
                   {" "}purpose.
                 </span>
               </h2>
 
-              <p className="mt-6 max-w-xl text-base leading-8 text-[#53635C]">
+              <p className="mt-6 max-w-xl text-base leading-8 text-[var(--text-color-muted)]">
                 Investing is not simply about selecting a product.
                 It is about understanding your destination,
                 building a strategy and staying focused as the
@@ -217,19 +217,19 @@ export default function InvestmentVisual() {
                     transition={{
                       delay: index * 0.12,
                     }}
-                    className="group flex items-center justify-between rounded-2xl border border-[#E4EBE7] bg-white p-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+                    className="group flex items-center justify-between rounded-2xl border border-[var(--border-color)] bg-white p-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                   >
                     <div className="flex items-center gap-4">
-                      <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#0B3D2E] text-[#D4AF37]">
+                      <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[var(--color-dark)] text-[var(--color-primary)]">
                         <Icon size={18} />
                       </div>
 
                       <div>
-                        <p className="text-xs text-[#53635C]/60">
+                        <p className="text-xs text-[var(--text-color-muted)]/60">
                           {item.label}
                         </p>
 
-                        <p className="mt-1 text-sm font-bold text-[#10231C]">
+                        <p className="mt-1 text-sm font-bold text-[var(--color-dark)]">
                           {item.value}
                         </p>
                       </div>
@@ -237,7 +237,7 @@ export default function InvestmentVisual() {
 
                     <ArrowUpRight
                       size={17}
-                      className="text-[#10231C]/20 transition-all group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-[#D4AF37]"
+                      className="text-[var(--color-dark)]/20 transition-all group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-[var(--color-primary)]"
                     />
                   </motion.div>
                 );

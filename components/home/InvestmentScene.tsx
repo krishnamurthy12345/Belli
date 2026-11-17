@@ -30,7 +30,7 @@ function CoreSphere() {
         <sphereGeometry args={[1.45, 64, 64]} />
 
         <meshStandardMaterial
-          color="#123F31"
+          color="#076BB6"
           metalness={0.75}
           roughness={0.22}
         />
@@ -64,10 +64,10 @@ function OrbitRing({
       <torusGeometry args={[radius, 0.018, 16, 160]} />
 
       <meshStandardMaterial
-        color="#D4AF37"
+        color="#E30045"
         metalness={0.9}
         roughness={0.18}
-        emissive="#5A4610"
+        emissive="#B80037"
         emissiveIntensity={0.25}
       />
     </mesh>
@@ -91,8 +91,8 @@ function FloatingPoint({
         <sphereGeometry args={[scale, 24, 24]} />
 
         <meshStandardMaterial
-          color="#D4AF37"
-          emissive="#D4AF37"
+          color="#E30045"
+          emissive="#E30045"
           emissiveIntensity={0.8}
           metalness={0.8}
           roughness={0.2}
@@ -110,13 +110,13 @@ function Scene() {
       <directionalLight
         position={[4, 5, 5]}
         intensity={3}
-        color="#FFF4C7"
+        color="#FFFFFF"
       />
 
       <pointLight
         position={[-4, -2, 3]}
         intensity={2}
-        color="#1B5E48"
+        color="#076BB6"
       />
 
       <CoreSphere />
@@ -161,7 +161,7 @@ function Scene() {
         scale={7}
         size={2}
         speed={0.3}
-        color="#D4AF37"
+        color="#E30045"
       />
 
       <OrbitControls

@@ -40,24 +40,24 @@ export default function SIPCalculator() {
   }, [monthlyInvestment, years, returnRate]);
 
   return (
-    <div className="relative overflow-hidden rounded-[28px] border border-[#E4EBE7] bg-white p-6 shadow-[0_25px_70px_rgba(11,61,46,0.10)] sm:p-8">
+    <div className="relative overflow-hidden rounded-[28px] border border-[var(--border-color)] bg-white p-6 shadow-[0_25px_70px_rgba(11,61,46,0.10)] sm:p-8">
       {/* Decorative background */}
-      <div className="pointer-events-none absolute -right-24 -top-24 h-56 w-56 rounded-full bg-[#D4AF37]/10 blur-3xl" />
-      <div className="pointer-events-none absolute -bottom-24 -left-24 h-56 w-56 rounded-full bg-[#0B3D2E]/10 blur-3xl" />
+      <div className="pointer-events-none absolute -right-24 -top-24 h-56 w-56 rounded-full bg-[var(--color-primary)]/10 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-24 -left-24 h-56 w-56 rounded-full bg-[var(--color-dark)]/10 blur-3xl" />
 
       <div className="relative">
         {/* Header */}
         <div className="mb-8 flex items-start gap-4">
-          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#EAF4EE] text-[#0B3D2E]">
+          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[var(--border-color)]/40 text-[var(--color-dark)]">
             <Calculator size={22} />
           </div>
 
           <div>
-            <h3 className="text-xl font-bold text-[#10231C] sm:text-2xl">
+            <h3 className="text-xl font-bold text-[var(--color-dark)] sm:text-2xl">
               SIP Calculator
             </h3>
 
-            <p className="mt-1 text-sm leading-6 text-[#697971]">
+            <p className="mt-1 text-sm leading-6 text-[var(--text-color-muted)]">
               See how your monthly investments could grow over time.
             </p>
           </div>
@@ -67,11 +67,11 @@ export default function SIPCalculator() {
           {/* Monthly Investment */}
           <div>
             <div className="mb-3 flex items-center justify-between gap-4">
-              <label className="text-sm font-semibold text-[#53635C]">
+              <label className="text-sm font-semibold text-[var(--text-color-muted)]">
                 Monthly Investment
               </label>
 
-              <span className="text-lg font-bold text-[#0B3D2E]">
+              <span className="text-lg font-bold text-[var(--color-dark)]">
                 {formatCurrency(monthlyInvestment)}
               </span>
             </div>
@@ -83,10 +83,10 @@ export default function SIPCalculator() {
               step="500"
               value={monthlyInvestment}
               onChange={(e) => setMonthlyInvestment(Number(e.target.value))}
-              className="h-2 w-full cursor-pointer appearance-none rounded-full bg-[#DDE7E2] accent-[#0B3D2E]"
+              className="h-2 w-full cursor-pointer appearance-none rounded-full bg-[var(--border-color)] accent-[var(--color-primary)]"
             />
 
-            <div className="mt-2 flex justify-between text-xs text-[#8A9690]">
+            <div className="mt-2 flex justify-between text-xs text-[var(--text-color-muted)]">
               <span>₹500</span>
               <span>₹1 Lakh</span>
             </div>
@@ -95,11 +95,11 @@ export default function SIPCalculator() {
           {/* Investment Period */}
           <div>
             <div className="mb-3 flex items-center justify-between gap-4">
-              <label className="text-sm font-semibold text-[#53635C]">
+              <label className="text-sm font-semibold text-[var(--text-color-muted)]">
                 Investment Period
               </label>
 
-              <span className="text-lg font-bold text-[#0B3D2E]">
+              <span className="text-lg font-bold text-[var(--color-dark)]">
                 {years} {years === 1 ? "Year" : "Years"}
               </span>
             </div>
@@ -111,10 +111,10 @@ export default function SIPCalculator() {
               step="1"
               value={years}
               onChange={(e) => setYears(Number(e.target.value))}
-              className="h-2 w-full cursor-pointer appearance-none rounded-full bg-[#DDE7E2] accent-[#0B3D2E]"
+              className="h-2 w-full cursor-pointer appearance-none rounded-full bg-[var(--border-color)] accent-[var(--color-primary)]"
             />
 
-            <div className="mt-2 flex justify-between text-xs text-[#8A9690]">
+            <div className="mt-2 flex justify-between text-xs text-[var(--text-color-muted)]">
               <span>1 Year</span>
               <span>30 Years</span>
             </div>
@@ -123,11 +123,11 @@ export default function SIPCalculator() {
           {/* Expected Return */}
           <div>
             <div className="mb-3 flex items-center justify-between gap-4">
-              <label className="text-sm font-semibold text-[#53635C]">
+              <label className="text-sm font-semibold text-[var(--text-color-muted)]">
                 Expected Return
               </label>
 
-              <span className="text-lg font-bold text-[#0B3D2E]">
+              <span className="text-lg font-bold text-[var(--color-dark)]">
                 {returnRate}%
               </span>
             </div>
@@ -139,10 +139,10 @@ export default function SIPCalculator() {
               step="0.5"
               value={returnRate}
               onChange={(e) => setReturnRate(Number(e.target.value))}
-              className="h-2 w-full cursor-pointer rounded-full bg-[#DDE7E2] accent-[#0B3D2E]"
+              className="h-2 w-full cursor-pointer rounded-full bg-[var(--border-color)] accent-[var(--color-primary)]"
             />
 
-            <div className="mt-2 flex justify-between text-xs text-[#8A9690]">
+            <div className="mt-2 flex justify-between text-xs text-[var(--text-color-muted)]">
               <span>1%</span>
               <span>20%</span>
             </div>
@@ -150,7 +150,7 @@ export default function SIPCalculator() {
         </div>
 
         {/* Result */}
-        <div className="mt-9 overflow-hidden rounded-2xl bg-[#0B3D2E] p-6 text-white">
+        <div className="mt-9 overflow-hidden rounded-2xl bg-[var(--color-dark)] p-6 text-white">
           <div className="mb-5 flex items-center justify-between">
             <div>
               <p className="text-sm text-white/65">Estimated Value</p>
@@ -168,7 +168,7 @@ export default function SIPCalculator() {
           {/* Progress visualization */}
           <div className="mb-5 h-3 overflow-hidden rounded-full bg-white/10">
             <div
-              className="h-full rounded-full bg-[#D4AF37] transition-all duration-500"
+              className="h-full rounded-full bg-[var(--color-primary)] transition-all duration-500"
               style={{
                 width: `${Math.min(
                   90,
@@ -195,14 +195,14 @@ export default function SIPCalculator() {
             <div className="rounded-xl border border-white/10 bg-white/5 p-4">
               <p className="text-xs text-white/55">Estimated Growth</p>
 
-              <p className="mt-1 text-base font-semibold text-[#D4AF37]">
+              <p className="mt-1 text-base font-semibold text-[var(--color-primary)]">
                 {formatCurrency(calculation.estimatedReturns)}
               </p>
             </div>
           </div>
         </div>
 
-        <p className="mt-5 text-xs leading-5 text-[#8A9690]">
+        <p className="mt-5 text-xs leading-5 text-[var(--text-color-muted)]">
           This calculator provides an illustrative estimate based on the
           assumed rate of return. Actual investment returns may vary and are
           not guaranteed.

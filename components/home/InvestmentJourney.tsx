@@ -50,7 +50,7 @@ const journeySteps = [
 
 export default function InvestmentJourney() {
   return (
-    <section id="journey" className="section-padding overflow-hidden bg-[#F8FAF8]">
+    <section id="journey" className="section-padding overflow-hidden bg-[var(--color-light)]">
       <div className="container-width">
         {/* Header */}
         <div className="mx-auto max-w-3xl text-center">
@@ -62,17 +62,17 @@ export default function InvestmentJourney() {
           >
             <div className="gold-line mx-auto mb-5" />
 
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#8D7125]">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--color-secondary)]">
               Your Investment Journey
             </p>
 
-            <h2 className="mt-4 text-4xl font-semibold leading-tight tracking-[-0.03em] text-[#10231C] sm:text-5xl">
+            <h2 className="mt-4 text-4xl font-semibold leading-tight tracking-[-0.03em] text-[var(--color-dark)] sm:text-5xl">
               From where you are
               <br />
               to where you want to be.
             </h2>
 
-            <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-[#697971]">
+            <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-[var(--text-color-muted)]">
               Building wealth is a journey. A clear process can help you
               stay focused, disciplined and connected to the goals that
               matter to you.
@@ -83,7 +83,7 @@ export default function InvestmentJourney() {
         {/* Journey */}
         <div className="relative mt-16">
           {/* Desktop connecting line */}
-          <div className="absolute left-[10%] right-[10%] top-[42px] hidden h-px bg-[#D7E1DB] lg:block">
+          <div className="absolute left-[10%] right-[10%] top-[42px] hidden h-px bg-[var(--border-color)] lg:block">
             <motion.div
               initial={{ scaleX: 0 }}
               whileInView={{ scaleX: 1 }}
@@ -92,12 +92,12 @@ export default function InvestmentJourney() {
                 duration: 1.5,
                 ease: "easeInOut",
               }}
-              className="h-full origin-left bg-[#B08D28]"
+              className="h-full origin-left bg-[var(--color-primary)]"
             />
           </div>
 
           {/* Mobile connecting line */}
-          <div className="absolute bottom-8 left-[25px] top-8 w-px bg-[#D7E1DB] lg:hidden">
+          <div className="absolute bottom-8 left-[25px] top-8 w-px bg-[var(--border-color)] lg:hidden">
             <motion.div
               initial={{ scaleY: 0 }}
               whileInView={{ scaleY: 1 }}
@@ -106,7 +106,7 @@ export default function InvestmentJourney() {
                 duration: 1.5,
                 ease: "easeInOut",
               }}
-              className="h-full origin-top bg-[#B08D28]"
+              className="h-full origin-top bg-[var(--color-primary)]"
             />
           </div>
 
@@ -136,23 +136,23 @@ export default function InvestmentJourney() {
                   className="relative flex gap-5 lg:block lg:text-center"
                 >
                   {/* Number/Icon */}
-                  <div className="relative z-10 flex h-[52px] w-[52px] shrink-0 items-center justify-center rounded-full border border-[#D7E1DB] bg-[#F8FAF8]">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-[#0B3D2E] shadow-sm transition-all duration-300 hover:bg-[#0B3D2E] hover:text-white">
+                  <div className="relative z-10 flex h-[52px] w-[52px] shrink-0 items-center justify-center rounded-full border border-[var(--border-color)] bg-[var(--color-light)]">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-[var(--color-dark)] shadow-sm transition-all duration-300 hover:bg-[var(--color-dark)] hover:text-white">
                       <Icon size={19} />
                     </div>
                   </div>
 
                   {/* Content */}
                   <div className="pt-0 lg:pt-7">
-                    <p className="text-[11px] font-bold tracking-[0.18em] text-[#B08D28]">
+                    <p className="text-[11px] font-bold tracking-[0.18em] text-[var(--color-primary)]">
                       STEP {step.number}
                     </p>
 
-                    <h3 className="mt-2 text-xl font-semibold text-[#10231C]">
+                    <h3 className="mt-2 text-xl font-semibold text-[var(--color-dark)]">
                       {step.title}
                     </h3>
 
-                    <p className="mt-3 text-sm leading-6 text-[#697971] lg:px-2">
+                    <p className="mt-3 text-sm leading-6 text-[var(--text-color-muted)] lg:px-2">
                       {step.description}
                     </p>
                   </div>
@@ -179,15 +179,15 @@ export default function InvestmentJourney() {
             duration: 0.7,
             delay: 0.2,
           }}
-          className="relative mt-20 overflow-hidden rounded-3xl bg-[#0B3D2E] px-7 py-8 sm:px-10"
+          className="relative mt-20 overflow-hidden rounded-3xl bg-[var(--color-dark)] px-7 py-8 sm:px-10"
         >
-          <div className="absolute -right-20 -top-28 h-64 w-64 rounded-full border border-[#D4AF37]/20" />
+          <div className="absolute -right-20 -top-28 h-64 w-64 rounded-full border border-[var(--color-primary)]/20" />
 
           <div className="absolute -bottom-40 left-1/3 h-72 w-72 rounded-full border border-white/10" />
 
           <div className="relative flex flex-col items-start justify-between gap-7 md:flex-row md:items-center">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#D4AF37]">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--color-primary)]">
                 Start with a conversation
               </p>
 
@@ -198,7 +198,7 @@ export default function InvestmentJourney() {
 
             <a
               href="/contact"
-              className="group flex shrink-0 items-center gap-2 rounded-xl bg-white px-5 py-3 text-sm font-semibold text-[#0B3D2E] transition-all duration-300 hover:-translate-y-1 hover:bg-[#F5F7F5]"
+              className="group flex shrink-0 items-center gap-2 rounded-xl bg-white px-5 py-3 text-sm font-semibold text-[var(--color-dark)] transition-all duration-300 hover:-translate-y-1 hover:bg-[var(--color-light)]"
             >
               Get Started
               <ArrowRight

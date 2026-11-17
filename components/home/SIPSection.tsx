@@ -14,7 +14,7 @@ const benefits = [
 
 export default function SIPSection() {
   return (
-    <section className="section-padding overflow-hidden bg-[#F8FAF8]">
+    <section className="section-padding overflow-hidden bg-[var(--color-light)]">
       <div className="container-width">
         <div className="grid items-center gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
           {/* Left Content */}
@@ -27,17 +27,17 @@ export default function SIPSection() {
             <div className="mb-5 flex items-center gap-3">
               <span className="gold-line" />
 
-              <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#B08D28]">
+              <span className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--color-primary)]">
                 Start Small. Think Big.
               </span>
             </div>
 
-            <h2 className="max-w-xl text-4xl font-bold leading-[1.08] tracking-tight text-[#10231C] sm:text-5xl">
+            <h2 className="max-w-xl text-4xl font-bold leading-[1.08] tracking-tight text-[var(--color-dark)] sm:text-5xl">
               Make investing a{" "}
               <span className="gradient-text">monthly habit.</span>
             </h2>
 
-            <p className="mt-6 max-w-lg text-base leading-7 text-[#53635C] sm:text-lg">
+            <p className="mt-6 max-w-lg text-base leading-7 text-[var(--text-color-muted)] sm:text-lg">
               A Systematic Investment Plan can help you invest consistently
               over time while keeping your financial goals in focus.
             </p>
@@ -57,10 +57,10 @@ export default function SIPSection() {
                 >
                   <CheckCircle2
                     size={19}
-                    className="shrink-0 text-[#0B3D2E]"
+                    className="shrink-0 text-[var(--color-dark)]"
                   />
 
-                  <span className="text-sm font-medium text-[#53635C]">
+                  <span className="text-sm font-medium text-[var(--text-color-muted)]">
                     {benefit}
                   </span>
                 </motion.div>
@@ -69,7 +69,7 @@ export default function SIPSection() {
 
             <Link
               href="/sip"
-              className="group mt-9 inline-flex items-center gap-2 rounded-full bg-[#0B3D2E] px-6 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1B5E48] hover:shadow-lg hover:shadow-[#0B3D2E]/15"
+              className="group mt-9 inline-flex items-center gap-2 rounded-full bg-[var(--color-dark)] px-6 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[var(--color-secondary)] hover:shadow-lg hover:shadow-black/15"
             >
               Explore SIP Investing
               <ArrowRight
@@ -78,8 +78,8 @@ export default function SIPSection() {
               />
             </Link>
 
-            <div className="mt-7 flex items-center gap-2 text-xs text-[#8A9690]">
-              <Sparkles size={14} className="text-[#B08D28]" />
+            <div className="mt-7 flex items-center gap-2 text-xs text-[var(--text-color-muted)]">
+              <Sparkles size={14} className="text-[var(--color-primary)]" />
               <span>Designed for consistent, goal-focused investing</span>
             </div>
           </motion.div>

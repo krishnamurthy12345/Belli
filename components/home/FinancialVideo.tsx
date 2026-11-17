@@ -5,12 +5,12 @@ import { ArrowUpRight } from "lucide-react";
 
 export default function FinancialVideo() {
   return (
-    <section className="relative overflow-hidden bg-[#f4f9f7] py-24">
+    <section className="relative overflow-hidden bg-[var(--color-light)] py-24">
       {/* Background Glow */}
-      <div className="pointer-events-none absolute -left-40 top-0 h-[500px] w-[500px] rounded-full bg-[#1B5E48]/30 blur-[140px]" />
+      <div className="pointer-events-none absolute -left-40 top-0 h-[500px] w-[500px] rounded-full bg-[var(--color-secondary)]/30 blur-[140px]" />
 
       <div className="container-width relative">
-        <div className="grid min-h-[560px] overflow-hidden rounded-[32px] border border-white/10 bg-[#0B3D2E] lg:grid-cols-2">
+        <div className="grid min-h-[560px] overflow-hidden rounded-[32px] border border-white/10 bg-[var(--color-dark)] lg:grid-cols-2">
 
           {/* =====================================================
               LEFT CONTENT
@@ -18,7 +18,7 @@ export default function FinancialVideo() {
           <div className="relative flex items-center px-7 py-14 sm:px-12 lg:px-16">
 
             {/* Decorative glow */}
-            <div className="pointer-events-none absolute -left-20 top-1/2 h-72 w-72 -translate-y-1/2 rounded-full bg-[#D4AF37]/5 blur-[100px]" />
+            <div className="pointer-events-none absolute -left-20 top-1/2 h-72 w-72 -translate-y-1/2 rounded-full bg-[var(--color-primary)]/5 blur-[100px]" />
 
             {/* Grid */}
             <div className="pointer-events-none absolute inset-0 opacity-[0.035]">
@@ -53,9 +53,9 @@ export default function FinancialVideo() {
             >
               {/* Eyebrow */}
               <div className="flex items-center gap-3">
-                <span className="h-[2px] w-10 bg-[#D4AF37]" />
+                <span className="h-[2px] w-10 bg-[var(--color-primary)]" />
 
-                <span className="text-xs font-bold uppercase tracking-[0.24em] text-[#D4AF37]">
+                <span className="text-xs font-bold uppercase tracking-[0.24em] text-[var(--color-primary)]">
                   Market Intelligence
                 </span>
               </div>
@@ -64,7 +64,7 @@ export default function FinancialVideo() {
               <h2 className="mt-6 text-4xl font-bold leading-[1.03] tracking-[-0.04em] text-white sm:text-5xl lg:text-6xl">
                 Read the Market.
                 <br />
-                <span className="text-[#D4AF37]">
+                <span className="text-[var(--color-primary)]">
                   Invest with Clarity.
                 </span>
               </h2>
@@ -78,7 +78,7 @@ export default function FinancialVideo() {
 
               {/* Bottom branding */}
               <div className="mt-9 flex items-center gap-4">
-                <div className="h-px w-12 bg-[#D4AF37]/60" />
+                <div className="h-px w-12 bg-[var(--color-primary)]/60" />
 
                 <span className="text-[10px] font-semibold uppercase tracking-[0.25em] text-white/40">
                   Bellis Capital
@@ -121,17 +121,17 @@ export default function FinancialVideo() {
             />
 
             {/* Very subtle video tint */}
-            <div className="pointer-events-none absolute inset-0 bg-[#0B3D2E]/10" />
+            <div className="pointer-events-none absolute inset-0 bg-[var(--color-dark)]/10" />
 
             {/* Right-side fade */}
-            <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[#0B3D2E]/40 to-transparent" />
+            <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[var(--color-dark)]/40 to-transparent" />
 
             {/* Video border */}
             <div className="pointer-events-none absolute inset-5 rounded-[24px] border border-white/10" />
 
             {/* Video label */}
-            <div className="absolute bottom-7 left-7 flex items-center gap-3 rounded-full border border-white/10 bg-[#071C16]/70 px-4 py-2.5 backdrop-blur-xl">
-              <span className="h-2 w-2 animate-pulse rounded-full bg-[#D4AF37]" />
+            <div className="absolute bottom-7 left-7 flex items-center gap-3 rounded-full border border-white/10 bg-[var(--color-dark)]/70 px-4 py-2.5 backdrop-blur-xl">
+              <span className="h-2 w-2 animate-pulse rounded-full bg-[var(--color-primary)]" />
 
               <span className="text-[9px] font-semibold uppercase tracking-[0.22em] text-white/70">
                 Market Overview
@@ -139,7 +139,7 @@ export default function FinancialVideo() {
             </div>
 
             {/* Arrow */}
-            <div className="absolute right-7 top-7 flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-[#071C16]/50 text-[#D4AF37] backdrop-blur-xl">
+            <div className="absolute right-7 top-7 flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-[var(--color-dark)]/50 text-[var(--color-primary)] backdrop-blur-xl">
               <ArrowUpRight size={17} />
             </div>
           </motion.div>

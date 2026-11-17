@@ -25,10 +25,10 @@ function Core() {
         <sphereGeometry args={[1.3, 48, 48]} />
 
         <meshStandardMaterial
-          color="#123F31"
+          color="#076BB6"
           metalness={0.8}
           roughness={0.2}
-          emissive="#0B3D2E"
+          emissive="#0A0A0A"
           emissiveIntensity={0.25}
         />
       </mesh>
@@ -63,10 +63,10 @@ function Ring({
       />
 
       <meshStandardMaterial
-        color="#D4AF37"
+        color="#E30045"
         metalness={0.9}
         roughness={0.15}
-        emissive="#D4AF37"
+        emissive="#E30045"
         emissiveIntensity={0.25}
       />
     </mesh>
@@ -81,13 +81,13 @@ function Scene() {
       <directionalLight
         position={[4, 5, 5]}
         intensity={3}
-        color="#FFF4C7"
+        color="#FFFFFF"
       />
 
       <pointLight
         position={[-4, -2, 3]}
         intensity={2}
-        color="#1B5E48"
+        color="#076BB6"
       />
 
       <Core />
@@ -115,7 +115,7 @@ function Scene() {
         scale={6}
         size={2}
         speed={0.3}
-        color="#D4AF37"
+        color="#E30045"
       />
 
       <OrbitControls

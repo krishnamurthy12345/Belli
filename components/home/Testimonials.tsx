@@ -39,19 +39,19 @@ export default function Testimonials() {
           <div className="mb-5 flex items-center justify-center gap-3">
             <span className="gold-line" />
 
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#B08D28]">
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--color-primary)]">
               Investor Stories
             </span>
 
             <span className="gold-line" />
           </div>
 
-          <h2 className="text-4xl font-bold tracking-tight text-[#10231C] sm:text-5xl">
+          <h2 className="text-4xl font-bold tracking-tight text-[var(--color-dark)] sm:text-5xl">
             Built around{" "}
             <span className="gradient-text">real goals.</span>
           </h2>
 
-          <p className="mt-5 text-base leading-7 text-[#53635C]">
+          <p className="mt-5 text-base leading-7 text-[var(--text-color-muted)]">
             A thoughtful investment journey starts with understanding what
             matters to you.
           </p>
@@ -70,9 +70,9 @@ export default function Testimonials() {
                 delay: index * 0.1,
               }}
               whileHover={{ y: -6 }}
-              className="group relative rounded-3xl border border-[#E4EBE7] bg-[#F8FAF8] p-7 transition-shadow duration-300 hover:shadow-[0_20px_50px_rgba(11,61,46,0.08)]"
+              className="group relative rounded-3xl border border-[var(--border-color)] bg-[var(--color-light)] p-7 transition-shadow duration-300 hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)]"
             >
-              <div className="absolute right-6 top-6 text-[#D4AF37]/25">
+              <div className="absolute right-6 top-6 text-[var(--color-primary)]/25">
                 <Quote size={40} />
               </div>
 
@@ -82,25 +82,25 @@ export default function Testimonials() {
                   <Star
                     key={star}
                     size={15}
-                    className="fill-[#D4AF37] text-[#D4AF37]"
+                    className="fill-[var(--color-primary)] text-[var(--color-primary)]"
                   />
                 ))}
               </div>
 
-              <p className="relative mt-6 text-[15px] leading-7 text-[#53635C]">
+              <p className="relative mt-6 text-[15px] leading-7 text-[var(--text-color-muted)]">
                 “{item.quote}”
               </p>
 
-              <div className="mt-7 border-t border-[#E4EBE7] pt-5">
-                <p className="font-semibold text-[#10231C]">{item.name}</p>
+              <div className="mt-7 border-t border-[var(--border-color)] pt-5">
+                <p className="font-semibold text-[var(--color-dark)]">{item.name}</p>
 
-                <p className="mt-1 text-xs text-[#8A9690]">{item.role}</p>
+                <p className="mt-1 text-xs text-[var(--text-color-muted)]">{item.role}</p>
               </div>
             </motion.div>
           ))}
         </div>
 
-        <p className="mt-8 text-center text-xs text-[#8A9690]">
+        <p className="mt-8 text-center text-xs text-[var(--text-color-muted)]">
           Illustrative testimonials for website design. Replace with verified
           client testimonials before publishing.
         </p>

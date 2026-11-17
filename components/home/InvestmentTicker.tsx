@@ -15,7 +15,7 @@ export default function InvestmentTicker() {
   const content = [...items, ...items];
 
   return (
-    <section className="overflow-hidden border-y border-[#D4AF37]/20 bg-[#10231C] py-5">
+    <section className="overflow-hidden border-y border-[var(--color-primary)]/20 bg-[var(--color-dark)] py-5">
       <motion.div
         animate={{
           x: ["0%", "-50%"],
@@ -36,7 +36,7 @@ export default function InvestmentTicker() {
               {item}
             </span>
 
-            <span className="h-1.5 w-1.5 rounded-full bg-[#D4AF37]" />
+            <span className="h-1.5 w-1.5 rounded-full bg-[var(--color-primary)]" />
           </div>
         ))}
       </motion.div>

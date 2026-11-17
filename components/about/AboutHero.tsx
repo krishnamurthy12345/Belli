@@ -15,7 +15,7 @@ const AboutScene = dynamic(
     ssr: false,
     loading: () => (
       <div className="flex h-[420px] items-center justify-center sm:h-[520px]">
-        <div className="h-24 w-24 rounded-full bg-[#D4AF37]/10 blur-2xl animate-pulse" />
+        <div className="h-24 w-24 rounded-full bg-[var(--color-primary)]/10 blur-2xl animate-pulse" />
       </div>
     ),
   }
@@ -41,10 +41,10 @@ const principles = [
 
 export default function AboutHero() {
   return (
-    <section className="relative min-h-screen overflow-hidden bg-[#0B3D2E] pt-24">
-      <div className="pointer-events-none absolute -left-40 top-20 h-[500px] w-[500px] rounded-full bg-[#1B5E48]/30 blur-[130px]" />
+    <section className="relative min-h-screen overflow-hidden bg-[var(--color-dark)] pt-24">
+      <div className="pointer-events-none absolute -left-40 top-20 h-[500px] w-[500px] rounded-full bg-[var(--color-secondary)]/30 blur-[130px]" />
 
-      <div className="pointer-events-none absolute -right-40 bottom-0 h-[500px] w-[500px] rounded-full bg-[#D4AF37]/10 blur-[140px]" />
+      <div className="pointer-events-none absolute -right-40 bottom-0 h-[500px] w-[500px] rounded-full bg-[var(--color-primary)]/10 blur-[140px]" />
 
       <div className="pointer-events-none absolute inset-0 opacity-[0.035]">
         <div
@@ -66,9 +66,9 @@ export default function AboutHero() {
               transition={{ duration: 0.6 }}
               className="mb-7 flex items-center gap-3"
             >
-              <span className="h-[2px] w-10 bg-[#D4AF37]" />
+              <span className="h-[2px] w-10 bg-[var(--color-primary)]" />
 
-              <span className="text-xs font-bold uppercase tracking-[0.24em] text-[#D4AF37]">
+              <span className="text-xs font-bold uppercase tracking-[0.24em] text-[var(--color-primary)]">
                 About Bellis Capital
               </span>
             </motion.div>
@@ -81,7 +81,7 @@ export default function AboutHero() {
             >
               Wealth is not
               <br />
-              <span className="text-[#D4AF37]">
+              <span className="text-[var(--color-primary)]">
                 just a number.
               </span>
             </motion.h1>
@@ -113,7 +113,7 @@ export default function AboutHero() {
                   >
                     <Icon
                       size={18}
-                      className="text-[#D4AF37]"
+                      className="text-[var(--color-primary)]"
                     />
 
                     <p className="mt-4 text-xs font-bold uppercase tracking-[0.12em] text-white">
@@ -158,12 +158,12 @@ export default function AboutHero() {
               }}
               className="pointer-events-none absolute inset-0 z-10 flex items-center justify-center"
             >
-              <div className="flex h-[150px] w-[150px] flex-col items-center justify-center rounded-full border border-[#D4AF37]/40 bg-[#10231C]/80 shadow-[0_0_70px_rgba(212,175,55,0.15)] backdrop-blur-xl sm:h-[190px] sm:w-[190px]">
+              <div className="flex h-[150px] w-[150px] flex-col items-center justify-center rounded-full border-2 border-[var(--color-primary)] bg-[var(--color-dark)] shadow-[0_0_60px_rgba(239,20,84,0.35)] backdrop-blur-xl sm:h-[190px] sm:w-[190px]">
 
-                <div className="absolute inset-4 rounded-full bg-[#0B3D2E]/80 shadow-inner" />
+                <div className="absolute inset-4 rounded-full border border-[var(--color-primary)]/30 bg-[var(--color-primary)]/10 shadow-inner" />
 
                 <div className="relative z-10 text-center">
-                  <p className="text-[9px] font-bold uppercase tracking-[0.3em] text-[#D4AF37]">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-[var(--color-primary)]">
                     Bellis
                   </p>
 
@@ -171,9 +171,9 @@ export default function AboutHero() {
                     Capital
                   </p>
 
-                  <div className="mx-auto mt-4 h-px w-10 bg-[#D4AF37]" />
+                  <div className="mx-auto mt-4 h-px w-10 bg-[var(--color-primary)]" />
 
-                  <p className="mt-3 text-[8px] uppercase tracking-[0.22em] text-white/40">
+                  <p className="mt-3 text-[8px] uppercase tracking-[0.22em] text-white/50">
                     Wealth • Strategy
                   </p>
                 </div>
@@ -188,7 +188,7 @@ export default function AboutHero() {
                 duration: 0.7,
                 delay: 0.9,
               }}
-              className="absolute right-0 top-[16%] hidden rounded-2xl border border-white/10 bg-[#10231C]/75 px-5 py-4 shadow-2xl backdrop-blur-xl sm:block"
+              className="absolute right-0 top-[16%] hidden rounded-2xl border border-white/10 bg-[var(--color-dark)]/75 px-5 py-4 shadow-2xl backdrop-blur-xl sm:block"
             >
               <p className="text-[9px] uppercase tracking-[0.2em] text-white/35">
                 Our Philosophy
@@ -240,7 +240,7 @@ export default function AboutHero() {
           >
             <ArrowDown
               size={15}
-              className="text-[#D4AF37]"
+              className="text-[var(--color-primary)]"
             />
           </motion.div>
         </motion.a>

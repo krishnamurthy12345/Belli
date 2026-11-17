@@ -45,7 +45,7 @@ function TargetIcon({ size = 20 }: { size?: number }) {
 
 export default function InvestmentPhilosophy() {
   return (
-    <section className="section-padding overflow-hidden bg-[#F8FAF8]">
+    <section className="section-padding overflow-hidden bg-[var(--color-light)]">
       <div className="container-width">
         <motion.div
           initial={{ opacity: 0, y: 25 }}
@@ -57,19 +57,19 @@ export default function InvestmentPhilosophy() {
           <div className="mb-5 flex items-center justify-center gap-3">
             <span className="gold-line" />
 
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#B08D28]">
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--color-primary)]">
               Our Philosophy
             </span>
 
             <span className="gold-line" />
           </div>
 
-          <h2 className="text-4xl font-bold tracking-tight text-[#10231C] sm:text-5xl">
+          <h2 className="text-4xl font-bold tracking-tight text-[var(--color-dark)] sm:text-5xl">
             A framework built for{" "}
             <span className="gradient-text">the long term.</span>
           </h2>
 
-          <p className="mt-5 text-base leading-7 text-[#53635C]">
+          <p className="mt-5 text-base leading-7 text-[var(--text-color-muted)]">
             We believe a strong investment process starts before the first
             investment is made.
           </p>
@@ -77,7 +77,7 @@ export default function InvestmentPhilosophy() {
 
         <div className="relative mt-16">
           {/* Connecting line */}
-          <div className="absolute left-[10%] right-[10%] top-8 hidden h-px bg-[#D8E2DD] lg:block" />
+          <div className="absolute left-[10%] right-[10%] top-8 hidden h-px bg-[var(--border-color)] lg:block" />
 
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {philosophy.map((item, index) => {
@@ -95,19 +95,19 @@ export default function InvestmentPhilosophy() {
                   }}
                   className="relative"
                 >
-                  <div className="relative z-10 flex h-16 w-16 items-center justify-center rounded-2xl border border-[#DCE6E1] bg-white text-[#0B3D2E] shadow-sm">
+                  <div className="relative z-10 flex h-16 w-16 items-center justify-center rounded-2xl border border-[var(--border-color)] bg-white text-[var(--color-dark)] shadow-sm">
                     <Icon size={22} />
                   </div>
 
-                  <p className="mt-7 text-xs font-bold tracking-[0.15em] text-[#B08D28]">
+                  <p className="mt-7 text-xs font-bold tracking-[0.15em] text-[var(--color-primary)]">
                     {item.number}
                   </p>
 
-                  <h3 className="mt-2 text-xl font-bold text-[#10231C]">
+                  <h3 className="mt-2 text-xl font-bold text-[var(--color-dark)]">
                     {item.title}
                   </h3>
 
-                  <p className="mt-3 text-sm leading-6 text-[#697971]">
+                  <p className="mt-3 text-sm leading-6 text-[var(--text-color-muted)]">
                     {item.description}
                   </p>
                 </motion.div>
