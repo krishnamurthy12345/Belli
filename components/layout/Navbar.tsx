@@ -88,7 +88,7 @@ export default function Navbar() {
 
           hover:scale-105
           hover:border-rose-500/60
-          hover:bg-[var(--bg-color-dark)]
+          hover:bg-[var(--bg-color-secondary)]
         "
       >
         {open ? (
@@ -99,7 +99,7 @@ export default function Navbar() {
         ) : (
           <ChevronDown
             size={20}
-            className="text-rose-500"
+            className="text-[var(--bg-color-dark)]"
           />
         )}
       </motion.button>
@@ -160,7 +160,7 @@ export default function Navbar() {
                 border
                 border-white/10
 
-                bg-[#102A43]/95
+                bg-[var(--bg-color-dark)]
 
                 px-4
                 shadow-2xl
@@ -221,7 +221,7 @@ export default function Navbar() {
                       text-[8px]
                       uppercase
                       tracking-[0.2em]
-                      text-[#168BD2]
+                      text-white
                       sm:block
                     "
                   >
@@ -255,8 +255,8 @@ export default function Navbar() {
 
                         ${
                           active
-                            ? "bg-rose-500/10 text-rose-400"
-                            : "text-white/60 hover:bg-white/5 hover:text-white"
+                            ? "bg-[var(--bg-color-secondary)] text-white"
+                            : "text-white hover:bg-white hover:text-black"
                         }
                       `}
                     >

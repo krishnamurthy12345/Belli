@@ -435,6 +435,7 @@ export default function InvestmentScene() {
                 duration-300
                 hover:bg-[var(--bg-color-secondary)]
                 hover:shadow-[0_0_40px_rgba(239,20,84,0.25)]
+                hover:text-white
               "
             >
               Explore Our Approach
@@ -473,7 +474,7 @@ export default function InvestmentScene() {
                 transition-all
                 duration-300
                 hover:border[var(--bg-color-dark)]
-                hover:bg-white/10
+                hover:bg-[var(--bg-color-secondary)]
               "
             >
               Discover Bellis

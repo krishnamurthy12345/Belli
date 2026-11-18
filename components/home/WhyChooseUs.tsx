@@ -302,7 +302,7 @@ export default function WhyChooseUs() {
             >
               <a
                 href="/about"
-                className="group inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-dark)]"
+                className="group inline-flex items-center p-2 rounded gap-2 text-sm font-semibold text-[var(--color-dark)] hover:bg-[var(--bg-color-secondary)] hover:text-white"
               >
                 Discover our approach
                 <ArrowUpRight
