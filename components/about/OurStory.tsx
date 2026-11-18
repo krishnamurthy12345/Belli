@@ -52,14 +52,14 @@ export default function OurStory() {
           transition={{ duration: 0.8 }}
           className="mb-24 overflow-hidden rounded-[36px] border border-[var(--border-color)] bg-white shadow-[0_25px_80px_rgba(10,10,10,0.07)]"
         >
-          <div className="grid items-center lg:grid-cols-[0.8fr_1.2fr]">
+          <div className="grid items-stretch md:grid-cols-[0.85fr_1.15fr] lg:grid-cols-[0.8fr_1.2fr]">
             {/* =================================================
                 FOUNDER IMAGE
             ================================================= */}
 
-            <div className="relative min-h-[420px] overflow-hidden rounded-[30px] border-2 border-[var(--color-primary)]/70 bg-[var(--color-dark)] p-2 shadow-[0_25px_70px_rgba(10,10,10,0.18)] sm:min-h-[500px]">
+            <div className="relative h-[480px] w-full overflow-hidden rounded-[30px] border-2 border-[var(--color-primary)]/70 bg-[#0B1D31] p-2 shadow-[0_25px_70px_rgba(10,10,10,0.18)] sm:h-[540px] md:h-full md:min-h-[520px]">
               {/* Inner Image Frame Container */}
-              <div className="relative h-full min-h-[404px] w-full overflow-hidden rounded-[24px] sm:min-h-[484px]">
+              <div className="relative h-full w-full overflow-hidden rounded-[24px]">
 
                 {/* Base Image */}
                 <Image
@@ -67,11 +67,11 @@ export default function OurStory() {
                   alt="Raja Sekar - Founder of Bellis Capital"
                   fill
                   priority
-                  className="object-cover object-center transition-transform duration-[1200ms] hover:scale-105"
+                  className="object-cover object-top transition-transform duration-[1200ms] hover:scale-105"
                 />
 
                 {/* Dark Gradient Overlay for Contrast */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-dark)]/90 via-[var(--color-dark)]/25 to-[var(--color-dark)]/10" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0B1D31]/95 via-[#0B1D31]/30 to-transparent" />
 
                 {/* Inner Gold Inset Border Line (All 4 Sides) */}
                 <div className="pointer-events-none absolute inset-4 z-10 rounded-[18px] border border-[var(--color-primary)]/50" />
@@ -81,19 +81,19 @@ export default function OurStory() {
                 <div className="pointer-events-none absolute bottom-6 right-6 z-20 h-6 w-6 border-b-2 border-r-2 border-[var(--color-primary)]" />
 
                 {/* Gold Vertical Accent Line */}
-                <div className="pointer-events-none absolute bottom-12 left-10 top-12 z-20 w-[2px] bg-gradient-to-b from-transparent via-[var(--color-primary)] to-transparent" />
+                <div className="pointer-events-none absolute bottom-12 left-8 top-12 z-20 hidden w-[2px] bg-gradient-to-b from-transparent via-[var(--color-primary)] to-transparent sm:block" />
 
                 {/* Founder Name & Info Overlay */}
-                <div className="absolute bottom-8 left-14 z-20">
+                <div className="absolute bottom-6 left-6 z-20 sm:bottom-8 sm:left-12">
                   <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-[var(--color-primary)]">
                     Bellis Capital
                   </p>
 
-                  <h3 className="mt-2 font-serif text-3xl text-white">
+                  <h3 className="mt-2 font-serif text-2xl text-white sm:text-3xl">
                     Raja Sekar
                   </h3>
 
-                  <p className="mt-1 text-sm text-white/70">
+                  <p className="mt-1 text-xs text-white/70 sm:text-sm">
                     Founder &amp; Wealth Strategist
                   </p>
                 </div>
@@ -102,7 +102,7 @@ export default function OurStory() {
             {/* =================================================
                 FOUNDER INTRODUCTION
             ================================================= */}
-            <div className="relative p-8 sm:p-12 lg:p-16">
+            <div className="relative p-6 sm:p-10 md:p-10 lg:p-16">
               <div className="absolute right-10 top-10 h-20 w-20 rounded-full bg-[var(--color-primary)]/[0.08] blur-2xl" />
 
               <div className="relative">

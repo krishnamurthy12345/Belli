@@ -64,7 +64,7 @@ export default function FinancialVideo() {
               <h2 className="mt-6 text-4xl font-bold leading-[1.03] tracking-[-0.04em] text-white sm:text-5xl lg:text-6xl">
                 Read the Market.
                 <br />
-                <span className="text-[var(--color-primary)]">
+                <span className="text-white">
                   Invest with Clarity.
                 </span>
               </h2>

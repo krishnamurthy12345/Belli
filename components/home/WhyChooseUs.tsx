@@ -100,7 +100,7 @@ export default function WhyChooseUs() {
                   <h3 className="mt-7 max-w-sm text-4xl font-semibold leading-tight tracking-[-0.03em] text-white sm:text-5xl">
                     Plan today.
                     <br />
-                    <span className="text-[var(--color-primary)]">
+                    <span className="text-white">
                       Grow tomorrow.
                     </span>
                   </h3>

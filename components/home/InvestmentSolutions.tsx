@@ -290,16 +290,16 @@ export default function InvestmentSolutions() {
                           rounded-2xl
                           border
                           border-white/20
-                          bg-[var(--color-dark)]/60
-                          text-[var(--color-primary)]
+                          bg-[var(--text-color)]
+                          text-[var(--bg-color-dark)]
                           shadow-lg
                           backdrop-blur-md
                           transition-all
                           duration-500
                           group-hover:scale-110
-                          group-hover:border-[var(--color-primary)]/50
-                          group-hover:bg-[var(--color-primary)]
-                          group-hover:text-[var(--color-dark)]
+                          group-hover:border-[var(--bg-color-dark)]
+                          group-hover:bg-[var(--bg-color-dark)]
+                          group-hover:text-[var(--color-light)]
                         "
                       >
                         <Icon size={21} />
@@ -317,14 +317,14 @@ export default function InvestmentSolutions() {
                           rounded-full
                           border
                           border-white/20
-                          bg-black/20
+                          bg-black
                           text-white
                           backdrop-blur-md
                           transition-all
                           duration-500
-                          group-hover:border-[var(--color-primary)]
-                          group-hover:bg-[var(--color-primary)]
-                          group-hover:text-[var(--color-dark)]
+                          group-hover:border-[var(--bg-color-dark)]
+                          group-hover:bg-[var(--bg-color-dark)]
+                          group-hover:text-[var(--color-light)]
                         "
                       >
                         <ArrowUpRight
@@ -358,7 +358,7 @@ export default function InvestmentSolutions() {
                           font-semibold
                           uppercase
                           tracking-[0.22em]
-                          text-[var(--color-primary)]
+                          text-[var(--text-color-light)]
                         "
                       >
                         Bellis Capital

@@ -346,8 +346,8 @@ export default function InvestmentScene() {
 
             <span
               className="
-                font-semibold
-                text-[#EF1454]
+                font-light
+                text-white
               "
             >
               With Purpose.
@@ -426,14 +426,14 @@ export default function InvestmentScene() {
                 justify-center
                 gap-3
                 rounded-full
-                bg-[#EF1454]
+                bg-[var(--bg-color-dark)]
                 px-7
                 text-sm
                 font-semibold
-                text-[#0B1D31]
+                text-whi
                 transition-all
                 duration-300
-                hover:bg-[#FF4B7E]
+                hover:bg-[var(--bg-color-secondary)]
                 hover:shadow-[0_0_40px_rgba(239,20,84,0.25)]
               "
             >
@@ -472,7 +472,7 @@ export default function InvestmentScene() {
                 backdrop-blur-md
                 transition-all
                 duration-300
-                hover:border-[#EF1454]/50
+                hover:border[var(--bg-color-dark)]
                 hover:bg-white/10
               "
             >

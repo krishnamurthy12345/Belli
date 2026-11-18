@@ -71,7 +71,7 @@ export default function Navbar() {
           rounded-full
           border
           border-rose-500/30
-          bg-[#102A43]/95
+          bg-[var(--bg-color-light)]
 
           text-sm
           font-semibold
@@ -88,7 +88,7 @@ export default function Navbar() {
 
           hover:scale-105
           hover:border-rose-500/60
-          hover:bg-[#194A78]
+          hover:bg-[var(--bg-color-dark)]
         "
       >
         {open ? (

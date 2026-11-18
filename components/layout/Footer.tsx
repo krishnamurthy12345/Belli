@@ -13,10 +13,10 @@ const footerLinks = {
   ],
 
   Education: [
-    { label: "Mutual Fund Vlogs", href: "/#education" },
-    { label: "Market Intelligence", href: "/#education" },
-    { label: "SIP Return Calculators", href: "/calculators" },
-    { label: "Economic Outlook", href: "/#education" },
+    { label: "Mutual Fund Vlogs", href: "" },
+    { label: "Market Intelligence", href: "" },
+    { label: "SIP Return Calculators", href: "" },
+    { label: "Economic Outlook", href: "" },
   ],
 };
 
@@ -79,7 +79,7 @@ export default function Footer() {
             </Link>
 
             {/* Description */}
-            <p className="mt-6 max-w-sm text-sm leading-7 text-white/50">
+            <p className="mt-6 max-w-sm text-sm leading-7 text-white/70">
               SEBI-aligned wealth management and mutual fund advisory dedicated
               to systematic capital compounding and disciplined portfolio
               management.
@@ -95,7 +95,7 @@ export default function Footer() {
             {/* CTA */}
             <Link
               href="/contact"
-              className="group mt-7 inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-primary)] hover:opacity-80"
+              className="group mt-7 inline-flex items-center gap-2 text-md font-semibold text-[var(--color-bg-light)] hover:opacity-80 hover:text-[var(--color-primary)]"
             >
               Start a conversation
 
@@ -111,7 +111,7 @@ export default function Footer() {
           ================================================= */}
 
           <div>
-            <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--color-primary)]">
+            <h3 className="text-md font-bold uppercase tracking-[0.2em] text-[var(--bg-color-light)]">
               Strategies
             </h3>
 
@@ -120,7 +120,7 @@ export default function Footer() {
                 <li key={link.href + link.label}>
                   <Link
                     href={link.href}
-                    className="group inline-flex items-center text-sm text-white/50 transition-all duration-300 hover:translate-x-1 hover:text-white"
+                    className="group inline-flex items-center text-sm font-semibold text-white/70 transition-all duration-300 hover:translate-x-1 hover:text-white"
                   >
                     <span>{link.label}</span>
                   </Link>
@@ -134,7 +134,7 @@ export default function Footer() {
           ================================================= */}
 
           <div>
-            <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--color-primary)]">
+            <h3 className="text-md font-bold uppercase tracking-[0.2em] text-[var(--bg-color-light)]">
               Education
             </h3>
 
@@ -143,7 +143,7 @@ export default function Footer() {
                 <li key={link.href + link.label}>
                   <Link
                     href={link.href}
-                    className="inline-flex text-sm text-white/50 transition-all duration-300 hover:translate-x-1 hover:text-white"
+                    className="inline-flex text-sm font-semibold text-white/70 transition-all duration-300"
                   >
                     {link.label}
                   </Link>
@@ -157,7 +157,7 @@ export default function Footer() {
           ================================================= */}
 
           <div>
-            <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--color-primary)]">
+            <h3 className="text-md font-bold uppercase tracking-[0.2em] text-[var(--bg-color-light)]">
               Direct Advisory
             </h3>
 
@@ -172,7 +172,7 @@ export default function Footer() {
                   className="mt-0.5 shrink-0 text-[var(--color-primary)]"
                 />
 
-                <span className="break-all text-sm leading-6 text-white/50 transition-colors duration-300 group-hover:text-white">
+                <span className="break-all text-sm font-semibold leading-6 text-white/70 transition-colors duration-300 group-hover:text-white">
                   belliscapitalofficial@gmail.com
                 </span>
               </a>
@@ -187,7 +187,7 @@ export default function Footer() {
                   className="shrink-0 text-[var(--color-primary)]"
                 />
 
-                <span className="text-sm text-white/50 transition-colors duration-300 group-hover:text-white">
+                <span className="text-md text-white/70 transition-colors duration-300 group-hover:text-white">
                   +91 94889 74620
                 </span>
               </a>
@@ -199,7 +199,7 @@ export default function Footer() {
                   className="mt-0.5 shrink-0 text-[var(--color-primary)]"
                 />
 
-                <p className="text-sm leading-6 text-white/50">
+                <p className="text-md leading-6 text-white/70">
                   Coimbatore
                   <br />
                   Tamil Nadu, India
@@ -209,7 +209,7 @@ export default function Footer() {
               {/* CTA */}
               <Link
                 href="/contact"
-                className="group inline-flex items-center gap-2 border-b border-[var(--color-primary)] pb-1 pt-2 text-xs font-bold uppercase tracking-[0.16em] text-[var(--color-primary)] transition-all duration-300 hover:border-white hover:text-white"
+                className="group inline-flex items-center gap-2 border-b border-[var(--color-primary)] pb-1 pt-2 text-sm font-bold uppercase tracking-[0.16em] text-[var(--color-bg-light)] transition-all duration-300 hover:border-white hover:text-[var(--color-primary)]"
               >
                 Book Advisory Call
 
@@ -228,7 +228,7 @@ export default function Footer() {
 
         <div className="border-b border-white/10 py-8">
           <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
-            <p className="text-justify text-[10px] leading-relaxed text-white/40">
+            <p className="text-justify text-[13px] leading-relaxed text-white/60">
               <span className="font-bold text-[var(--color-primary)]">Disclaimer:</span>{" "}
               Mutual Fund investments are subject to market risks, read all
               scheme-related documents carefully. The information provided on
@@ -243,7 +243,7 @@ export default function Footer() {
             BOTTOM BAR
         ====================================================== */}
 
-        <div className="flex flex-col gap-4 py-7 text-xs text-white/35 sm:flex-row sm:items-center sm:justify-between">
+        <div className="flex flex-col gap-4 py-7 text-sm text-white/70 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex flex-wrap items-center gap-2">
             <p>
               © {new Date().getFullYear()} Belli&apos;s Capital. All rights reserved.
@@ -255,23 +255,23 @@ export default function Footer() {
               href="https://www.gdinexus.in/"
               target="_blank"
               rel="noopener noreferrer"
-              className="transition-colors duration-300 hover:text-[var(--color-secondary)]"
+              className="transition-colors duration-300 hover:text-[var(--color-primary)]"
             >
-              Powered by <span className="font-semibold text-white/50 hover:text-[var(--color-secondary)]">GDI Nexus</span>
+              Powered by <span className="text-sm font-semibold text-white/50 hover:text-[var(--color-primary)]">GDI Nexus</span>
             </a>
           </div>
 
-          <div className="flex gap-6">
+          <div className="flex gap-6 text-sm">
             <Link
               href="/privacy-policy"
-              className="transition-colors duration-300 hover:text-white"
+              className="transition-colors duration-300 hover:text-[var(--color-primary)]"
             >
               Privacy Policy
             </Link>
 
             <Link
               href="/terms"
-              className="transition-colors duration-300 hover:text-white"
+              className="transition-colors duration-300 hover:text-[var(--color-primary)]"
             >
               Terms of Use
             </Link>

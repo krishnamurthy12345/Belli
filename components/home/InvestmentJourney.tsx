@@ -198,7 +198,7 @@ export default function InvestmentJourney() {
 
             <a
               href="/contact"
-              className="group flex shrink-0 items-center gap-2 rounded-xl bg-white px-5 py-3 text-sm font-semibold text-[var(--color-dark)] transition-all duration-300 hover:-translate-y-1 hover:bg-[var(--color-light)]"
+              className="group flex shrink-0 items-center gap-2 rounded-xl bg-white px-5 py-3 text-sm font-semibold text-[var(--color-dark)] transition-all duration-300 hover:-translate-y-1 hover:bg-[var(--color-primary)] hover:text-white hover:shadow-lg hover:shadow-[var(--color-primary)]/30"
             >
               Get Started
               <ArrowRight

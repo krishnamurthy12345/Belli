@@ -81,7 +81,7 @@ export default function AboutHero() {
             >
               Wealth is not
               <br />
-              <span className="text-[var(--color-primary)]">
+              <span className="text-white">
                 just a number.
               </span>
             </motion.h1>
@@ -158,12 +158,12 @@ export default function AboutHero() {
               }}
               className="pointer-events-none absolute inset-0 z-10 flex items-center justify-center"
             >
-              <div className="flex h-[150px] w-[150px] flex-col items-center justify-center rounded-full border-2 border-[var(--color-primary)] bg-[var(--color-dark)] shadow-[0_0_60px_rgba(239,20,84,0.35)] backdrop-blur-xl sm:h-[190px] sm:w-[190px]">
+              <div className="flex h-[150px] w-[150px] flex-col items-center justify-center rounded-full border-2 border-white/80 bg-[var(--color-dark)] shadow-[0_0_60px_rgba(255,255,255,0.3)] backdrop-blur-xl sm:h-[190px] sm:w-[190px]">
 
-                <div className="absolute inset-4 rounded-full border border-[var(--color-primary)]/30 bg-[var(--color-primary)]/10 shadow-inner" />
+                <div className="absolute inset-4 rounded-full border border-white/40 bg-white/10 shadow-inner" />
 
                 <div className="relative z-10 text-center">
-                  <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-[var(--color-primary)]">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-white">
                     Bellis
                   </p>
 
@@ -171,9 +171,9 @@ export default function AboutHero() {
                     Capital
                   </p>
 
-                  <div className="mx-auto mt-4 h-px w-10 bg-[var(--color-primary)]" />
+                  <div className="mx-auto mt-4 h-px w-10 bg-white/70" />
 
-                  <p className="mt-3 text-[8px] uppercase tracking-[0.22em] text-white/50">
+                  <p className="mt-3 text-[8px] uppercase tracking-[0.22em] text-white/60">
                     Wealth • Strategy
                   </p>
                 </div>

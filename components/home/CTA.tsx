@@ -40,7 +40,7 @@ export default function CTA() {
           <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Link
               href="/contact"
-              className="group inline-flex items-center justify-center gap-2 rounded-full bg-[var(--color-primary)] px-7 py-3.5 text-sm font-bold text-white transition-all duration-300 hover:-translate-y-0.5 hover:opacity-90 hover:shadow-xl hover:shadow-[var(--color-primary)]/20"
+              className="group inline-flex items-center justify-center gap-2 rounded-full bg-[var(--bg-color-dark)] px-7 py-3.5 text-sm font-bold text-white transition-all duration-300 hover:-translate-y-0.5 hover:opacity-90 hover:shadow-xl hover:bg-[var(--bg-color-secondary)] hover:shadow-[var(--color-primary)]/20"
             >
               Start Your Investment Journey
 
@@ -52,7 +52,7 @@ export default function CTA() {
 
             <Link
               href="/mutual-funds"
-              className="inline-flex items-center justify-center rounded-full border border-[var(--border-color)] bg-white px-7 py-3.5 text-sm font-semibold text-[var(--text-color)] transition-all duration-300 hover:border-[var(--color-secondary)] hover:text-[var(--color-secondary)]"
+              className="inline-flex items-center justify-center rounded-full border border-[var(--border-color)] bg-white px-7 py-3.5 text-sm font-semibold text-[var(--text-color)] transition-all duration-300 hover:border-[var(--bg-color-dark)] hover:text-[var(--bg-color-light)] hover:bg-[var(--bg-color-dark)]"
             >
               Explore Investments
             </Link>

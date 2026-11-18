@@ -7,8 +7,8 @@
   --primary: #EF1454;
   --primary-light: #FF477A;
 
-  --secondary: #168BD2;
-  --secondary-light: #2469A7;
+  --secondary: #0EA5E9;
+  --secondary-light: #38BDF8;
 
   --accent: #EF1454;
 
@@ -20,20 +20,20 @@
 
   --border: #E5E9EF;
 
-  /* Brand Colors (Red and Blue, Dark for text) */
+  /* Brand Colors (Red and Sky Blue, Dark for text) */
   --color-primary: #EF1454;
   --bg-color-primary: #EF1454;
   --text-color-primary: #EF1454;
   --border-color-primary: #EF1454;
 
-  --color-secondary: #168BD2;
-  --bg-color-secondary: #168BD2;
-  --text-color-secondary: #168BD2;
-  --border-color-secondary: #168BD2;
+  --color-secondary: #0EA5E9;
+  --bg-color-secondary: #0EA5E9;
+  --text-color-secondary: #0EA5E9;
+  --border-color-secondary: #0EA5E9;
 
-  --color-dark: #0b679f;
-  --bg-color-dark: #0b679f;
-  --text-color-dark: #0b679f;
+  --color-dark: #4866E8	;
+  --bg-color-dark: #4866E8	;
+  --text-color-dark: #4866E8	;
 
   --color-light: #FFFFFF;
   --bg-color-light: #F8F9FB;
@@ -111,7 +111,7 @@ a {
     120deg,
     #ef1454,
     #c2114b,
-    #168bd2
+    #0ea5e9
   );
   -webkit-background-clip: text;
   background-clip: text;

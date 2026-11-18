@@ -168,7 +168,7 @@ export default function ContactExperience() {
                 <br />
                 financial chapter
                 <br />
-                <span className="text-[var(--color-primary)]">starts here.</span>
+                <span className="text-white">starts here.</span>
               </h1>
 
               {/* Description */}
@@ -183,7 +183,7 @@ export default function ContactExperience() {
               <div className="mt-9 flex flex-wrap gap-3">
                 <a
                   href="#contact-details"
-                  className="group inline-flex items-center gap-2 rounded-full bg-[var(--color-primary)] px-7 py-4 text-sm font-bold text-[var(--color-dark)] transition-all duration-300 hover:-translate-y-1 hover:opacity-90"
+                  className="group inline-flex items-center gap-2 rounded-full bg-[var(--bg-color-light)] text-[var(--bg-color-dark)] px-7 py-4 text-sm font-bold text-[var(--color-dark)] transition-all duration-300 hover:-translate-y-1 hover:bg-[var(--bg-color-primary)]"
                 >
                   Start a Conversation
                   <ArrowRight
@@ -194,7 +194,7 @@ export default function ContactExperience() {
 
                 <Link
                   href="/about"
-                  className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-7 py-4 text-sm font-semibold text-white transition-all duration-300 hover:bg-white/10"
+                  className="inline-flex items-center gap-2 rounded-full bg-[var(--bg-color-light)] border border-white/15 text-[var(--bg-color-dark)] px-7 py-4 text-sm font-semibold transition-all duration-300 hover:-translate-y-1 hover:bg-[var(--bg-color-primary)]"
                 >
                   <MessageCircle size={16} />
                   Why Bellis
@@ -232,11 +232,11 @@ export default function ContactExperience() {
               }}
               className="relative flex min-h-[430px] items-center justify-center sm:min-h-[520px]"
             >
-              {/* Vibrant Ambient Red Glow */}
-              <div className="absolute h-[380px] w-[380px] rounded-full bg-[var(--color-primary)]/25 blur-[120px]" />
-              <div className="absolute h-[240px] w-[240px] rounded-full bg-[var(--color-primary)]/35 blur-[70px]" />
+              {/* Luminous Ambient White Glow */}
+              <div className="absolute h-[380px] w-[380px] rounded-full bg-white/15 blur-[120px]" />
+              <div className="absolute h-[240px] w-[240px] rounded-full bg-white/25 blur-[70px]" />
 
-              {/* Outer rotating ring (Vibrant Red) */}
+              {/* Outer rotating ring (Luminous White) */}
               <motion.div
                 animate={{
                   rotate: 360
@@ -246,16 +246,16 @@ export default function ContactExperience() {
                   repeat: Infinity,
                   ease: "linear"
                 }}
-                className="absolute h-[370px] w-[370px] rounded-full border-2 border-[var(--color-primary)]/60 shadow-[0_0_30px_rgba(239,20,84,0.18)] sm:h-[460px] sm:w-[460px]"
+                className="absolute h-[370px] w-[370px] rounded-full border-2 border-white/60 shadow-[0_0_30px_rgba(255,255,255,0.2)] sm:h-[460px] sm:w-[460px]"
               >
-                {/* Glowing Red Planet 1 */}
-                <span className="absolute -left-2.5 top-1/2 h-5 w-5 -translate-y-1/2 rounded-full bg-[var(--color-primary)] shadow-[0_0_25px_var(--color-primary),0_0_50px_var(--color-primary)] ring-4 ring-[var(--color-primary)]/30" />
+                {/* Glowing White Planet 1 */}
+                <span className="absolute -left-2.5 top-1/2 h-5 w-5 -translate-y-1/2 rounded-full bg-white shadow-[0_0_25px_white,0_0_50px_white] ring-4 ring-white/30" />
 
                 {/* Satellite 1 */}
-                <span className="absolute -right-1 top-[28%] h-3 w-3 rounded-full bg-[var(--color-primary)] shadow-[0_0_15px_var(--color-primary)] ring-2 ring-white/50" />
+                <span className="absolute -right-1 top-[28%] h-3 w-3 rounded-full bg-white shadow-[0_0_15px_white] ring-2 ring-white/60" />
               </motion.div>
 
-              {/* Middle ring (Vibrant Red) */}
+              {/* Middle ring (Luminous White) */}
               <motion.div
                 animate={{
                   rotate: -360
@@ -265,15 +265,15 @@ export default function ContactExperience() {
                   repeat: Infinity,
                   ease: "linear"
                 }}
-                className="absolute h-[280px] w-[280px] rounded-full border border-[var(--color-primary)]/50 sm:h-[350px] sm:w-[350px]"
+                className="absolute h-[280px] w-[280px] rounded-full border border-white/50 sm:h-[350px] sm:w-[350px]"
               >
-                {/* Glowing Red Planet 2 */}
-                <span className="absolute right-[10%] top-1/2 h-4 w-4 -translate-y-1/2 rounded-full bg-[var(--color-primary)] shadow-[0_0_20px_var(--color-primary)] ring-2 ring-white/70" />
+                {/* Glowing White Planet 2 */}
+                <span className="absolute right-[10%] top-1/2 h-4 w-4 -translate-y-1/2 rounded-full bg-white shadow-[0_0_20px_white] ring-2 ring-white/70" />
 
                 <span className="absolute left-[15%] bottom-[20%] h-2 w-2 rounded-full bg-white shadow-[0_0_10px_white]" />
               </motion.div>
 
-              {/* Inner ring (Vibrant Red) */}
+              {/* Inner ring (Luminous White) */}
               <motion.div
                 animate={{
                   rotate: 360
@@ -283,10 +283,10 @@ export default function ContactExperience() {
                   repeat: Infinity,
                   ease: "linear"
                 }}
-                className="absolute h-[190px] w-[190px] rounded-full border-2 border-[var(--color-primary)]/70 sm:h-[240px] sm:w-[240px]"
+                className="absolute h-[190px] w-[190px] rounded-full border-2 border-white/70 sm:h-[240px] sm:w-[240px]"
               >
                 {/* Fast Orb */}
-                <span className="absolute left-[12%] top-[15%] h-3 w-3 rounded-full bg-[var(--color-primary)] shadow-[0_0_15px_var(--color-primary)]" />
+                <span className="absolute left-[12%] top-[15%] h-3 w-3 rounded-full bg-white shadow-[0_0_15px_white]" />
               </motion.div>
 
               {/* Central card */}
@@ -299,13 +299,13 @@ export default function ContactExperience() {
                   repeat: Infinity,
                   ease: "easeInOut"
                 }}
-                className="relative z-10 flex h-[190px] w-[190px] flex-col items-center justify-center rounded-full border-2 border-[var(--color-primary)] bg-[var(--color-dark)] shadow-[0_0_60px_rgba(239,20,84,0.35)] backdrop-blur-xl sm:h-[220px] sm:w-[220px]"
+                className="relative z-10 flex h-[190px] w-[190px] flex-col items-center justify-center rounded-full border-2 border-white/80 bg-[var(--color-dark)] shadow-[0_0_60px_rgba(255,255,255,0.3)] backdrop-blur-xl sm:h-[220px] sm:w-[220px]"
               >
-                {/* Inner red glow */}
-                <div className="absolute inset-4 rounded-full border border-[var(--color-primary)]/30 bg-[var(--color-primary)]/10 shadow-inner" />
+                {/* Inner white glow */}
+                <div className="absolute inset-4 rounded-full border border-white/40 bg-white/10 shadow-inner" />
 
                 <div className="relative z-10 text-center">
-                  <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-[var(--color-primary)]">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-white">
                     Bellis
                   </p>
 
@@ -313,9 +313,9 @@ export default function ContactExperience() {
                     Capital
                   </p>
 
-                  <div className="mx-auto mt-4 h-px w-10 bg-[var(--color-primary)]" />
+                  <div className="mx-auto mt-4 h-px w-10 bg-white/70" />
 
-                  <p className="mt-3 text-[8px] uppercase tracking-[0.22em] text-white/50">
+                  <p className="mt-3 text-[8px] uppercase tracking-[0.22em] text-white/60">
                     Wealth • Strategy
                   </p>
                 </div>
@@ -418,7 +418,7 @@ export default function ContactExperience() {
                       transition={{ duration: 0.4, delay: index * 0.1 }}
                       className="group flex items-center gap-4 rounded-2xl border border-[var(--border-color)] bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[var(--color-primary)]/50 hover:shadow-md"
                     >
-                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[var(--color-dark)] text-[var(--color-primary)] transition-all group-hover:bg-[var(--color-primary)] group-hover:text-[var(--color-dark)]">
+                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[var(--color-dark)] text-[var(--bg-color-light)] transition-all group-hover:bg-[var(--color-primary)] group-hover:text-[var(--color-dark)]">
                         <Icon size={20} />
                       </div>
                       <div>
@@ -440,9 +440,9 @@ export default function ContactExperience() {
                   href="https://wa.me/919488974620"
                   target="_blank"
                   rel="noreferrer"
-                  className="group inline-flex items-center gap-2 rounded-xl bg-[var(--color-dark)] px-5 py-3 text-xs font-bold uppercase tracking-[0.12em] text-white transition-all duration-300 hover:-translate-y-1 hover:bg-[var(--color-secondary)]"
+                  className="group inline-flex items-center gap-2 rounded-xl bg-[var(--color-dark)] px-5 py-3 text-xs font-bold uppercase tracking-[0.12em] text-white transition-all duration-300 hover:-translate-y-1 hover:bg-[var(--color-primary)]"
                 >
-                  <MessageCircle size={16} className="text-[var(--color-primary)]" />
+                  <MessageCircle size={16} className="text-[var(--bg-color-light)] " />
                   WhatsApp
                 </a>
 
@@ -588,11 +588,11 @@ export default function ContactExperience() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="mt-2 inline-flex items-center justify-center gap-2 rounded-xl bg-[var(--color-dark)] py-4 text-sm font-bold text-white transition-all duration-300 hover:bg-[var(--color-secondary)] hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-70"
+                  className="group mt-2 inline-flex items-center justify-center gap-2 rounded-xl bg-[var(--color-dark)] py-4 text-sm font-bold text-white transition-all duration-300 hover:bg-[var(--color-primary)] hover:text-white hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-70"
                 >
                   {isSubmitting ? "Submitting..." : "Submit Request"}
 
-                  <Send size={15} className="text-[var(--color-primary)]" />
+                  <Send size={15} className="text-[var(--color-primary)] transition-colors duration-300 group-hover:text-white" />
                 </button>
               </form>
             </motion.div>
@@ -638,7 +638,7 @@ export default function ContactExperience() {
 
             <a
               href="mailto:belliscapitalofficial@gmail.com"
-              className="mt-9 inline-flex items-center gap-2 rounded-full bg-[var(--color-primary)] px-7 py-4 text-sm font-bold text-[var(--color-dark)] transition-all duration-300 hover:-translate-y-1 hover:opacity-90"
+              className="mt-9 inline-flex items-center gap-2 rounded-full bg-white px-7 py-4 text-sm font-bold text-[var(--color-dark)] transition-all duration-300 hover:-translate-y-1 hover:bg-[var(--bg-color-dark)] hover:text-white outline hover:border-[var(--bg-color-light)]"
             >
               Get in Touch
               <ArrowRight size={17} />
