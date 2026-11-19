@@ -129,7 +129,7 @@ export default function ContactExperience() {
         <div className="pointer-events-none absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[var(--color-dark)]/50 blur-[140px]" />
 
         {/* Decorative dots */}
-        <div className="pointer-events-none absolute left-[8%] top-[30%] h-2 w-2 rounded-full bg-[var(--color-primary)] shadow-[0_0_20px_rgba(227,0,69,0.8)]" />
+        {/* <div className="pointer-events-none absolute left-[8%] top-[30%] h-2 w-2 rounded-full bg-[var(--color-primary)] shadow-[0_0_20px_rgba(227,0,69,0.8)]" /> */}
 
         <div className="pointer-events-none absolute right-[15%] top-[20%] h-1.5 w-1.5 rounded-full bg-white/40" />
 
@@ -309,7 +309,7 @@ export default function ContactExperience() {
                     Bellis
                   </p>
 
-                  <p className="mt-2 font-serif text-3xl italic text-white sm:text-4xl">
+                  <p className="mt-2 font-serif text-3xl italic text-[var(--text-color-primary)] sm:text-4xl">
                     Capital
                   </p>
 

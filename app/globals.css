@@ -21,19 +21,19 @@
   --border: #E5E9EF;
 
   /* Brand Colors (Red and Sky Blue, Dark for text) */
-  --color-primary: #EF1454;
-  --bg-color-primary: #EF1454;
-  --text-color-primary: #EF1454;
-  --border-color-primary: #EF1454;
+  --color-primary: #841032;
+  --bg-color-primary: #841032;
+  --text-color-primary: #841032;
+  --border-color-primary: #841032;
 
   --color-secondary: #0EA5E9;
   --bg-color-secondary: #0EA5E9;
   --text-color-secondary: #0EA5E9;
   --border-color-secondary: #0EA5E9;
 
-  --color-dark: #4866E8	;
-  --bg-color-dark: #4866E8	;
-  --text-color-dark: #4866E8	;
+  --color-dark: #277df7	;
+  --bg-color-dark: #277df7	;
+  --text-color-dark: #277df7	;
 
   --color-light: #FFFFFF;
   --bg-color-light: #F8F9FB;

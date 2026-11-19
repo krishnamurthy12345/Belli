@@ -1,12 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "motion/react";
-import {
-  ArrowRight,
-  ChevronDown,
-  X,
-} from "lucide-react";
+import { ArrowRight, Menu, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -26,348 +22,255 @@ const navItems = [
 ];
 
 export default function Navbar() {
-  const [open, setOpen] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Close mobile menu when pathname changes
+  useEffect(() => {
+    setMobileOpen(false);
+  }, [pathname]);
+
   return (
-    <>
-      {/* =====================================================
-          CENTER DROPDOWN / MOBILE TOGGLE BUTTON
-      ====================================================== */}
-
-      <motion.button
-        type="button"
-        onClick={() => setOpen((prev) => !prev)}
-        aria-label={open ? "Close navigation" : "Open navigation"}
-        aria-expanded={open}
-        initial={{
-          opacity: 0,
-          y: -20,
-          scale: 0.9,
-        }}
-        animate={{
-          opacity: 1,
-          y: 0,
-          scale: 1,
-        }}
-        transition={{
-          duration: 0.5,
-          delay: 0.2,
-        }}
+    <header
+      className={`
+        fixed
+        left-0
+        right-0
+        top-0
+        z-50
+        transition-all
+        duration-300
+        ${
+          scrolled
+            ? "border-b border-white/10 bg-[var(--color-secondary)] py-3 shadow-xl shadow-black/20 backdrop-blur-xl"
+            : "border-b border-white/5 bg-[var(--color-secondary)] py-4 backdrop-blur-md"
+        }
+      `}
+    >
+      <div
         className="
-          fixed
-          left-1/2
-          top-5
-          z-[100]
-          -translate-x-1/2
-
+          mx-auto
           flex
+          max-w-7xl
           items-center
-          justify-center
-
-          h-14
-          w-24
-
-          rounded-full
-          border
-          border-rose-500/30
-          bg-[var(--bg-color-light)]
-
-          text-sm
-          font-semibold
-          tracking-wide
-          text-white
-
-          shadow-2xl
-          shadow-black/30
-
-          backdrop-blur-xl
-
-          transition-all
-          duration-300
-
-          hover:scale-105
-          hover:border-rose-500/60
-          hover:bg-[var(--bg-color-secondary)]
+          justify-between
+          px-6
+          sm:px-10
+          lg:px-16
         "
       >
-        {open ? (
-          <X
-            size={20}
-            className="text-rose-500"
-          />
-        ) : (
-          <ChevronDown
-            size={20}
-            className="text-[var(--bg-color-dark)]"
-          />
-        )}
-      </motion.button>
-
-      {/* =====================================================
-          DESKTOP NAVBAR DROPDOWN
-          IMPORTANT:
-          hidden on mobile
-          visible from md and above
-      ====================================================== */}
-
-      <AnimatePresence>
-        {open && (
-          <motion.header
-            initial={{
-              opacity: 0,
-              y: -30,
-              scale: 0.96,
-            }}
-            animate={{
-              opacity: 1,
-              y: 0,
-              scale: 1,
-            }}
-            exit={{
-              opacity: 0,
-              y: -30,
-              scale: 0.96,
-            }}
-            transition={{
-              duration: 0.4,
-              ease: [0.22, 1, 0.36, 1],
-            }}
+        {/* =================================================
+            LOGO
+        ================================================= */}
+        <Link
+          href="/"
+          className="group flex items-center gap-3.5"
+          aria-label="Bellis Capital Home"
+        >
+          <div
             className="
-              fixed
-              left-4
-              right-4
-              top-[82px]
-              z-[90]
-
-              hidden
-              md:block
-
-              md:left-8
-              md:right-8
+              relative
+              flex
+              h-11
+              w-11
+              items-center
+              justify-center
+              overflow-hidden
+              rounded-xl
+              border
+              border-[#EF1454]/30
+              bg-white
+              p-1
+              shadow-[0_4px_20px_rgba(0,0,0,0.25)]
+              transition-all
+              duration-300
+              group-hover:scale-105
+              group-hover:border-[#EF1454]/70
             "
           >
-            <nav
+            <img
+              src="/images/bellis-logo.jpeg"
+              alt="Bellis Capital Logo"
+              className="h-full w-full object-contain"
+            />
+          </div>
+
+          <div>
+            <div
               className="
-                mx-auto
-                flex
-                h-[68px]
-                max-w-7xl
-                items-center
-                justify-between
-
-                rounded-2xl
-                border
-                border-white/10
-
-                bg-[var(--bg-color-dark)]
-
-                px-4
-                shadow-2xl
-                shadow-black/20
-
-                backdrop-blur-2xl
-
-                sm:px-6
+                text-base
+                font-bold
+                tracking-tight
+                text-white
+                transition-colors
+                duration-300
+                group-hover:text-[#EF1454]
+                sm:text-lg
               "
             >
-              {/* =================================================
-                  LOGO
-              ================================================= */}
+              BELLIS{" "}
+              <span className="text-[#EF1454]">
+                CAPITAL
+              </span>
+            </div>
 
+            <div
+              className="
+                text-[9px]
+                font-bold
+                uppercase
+                tracking-[0.22em]
+                text-[var(--color-primary)]
+              "
+            >
+              Wealth and Health
+            </div>
+          </div>
+        </Link>
+
+        {/* =================================================
+            DESKTOP NAVIGATION LINKS
+        ================================================= */}
+        <nav className="hidden items-center gap-1 md:flex">
+          {navItems.map((item) => {
+            const active = pathname === item.href;
+
+            return (
               <Link
-                href="/"
-                onClick={() => setOpen(false)}
-                className="
-                  group
-                  flex
-                  items-center
-                  gap-3
-                "
-              >
-                <div
-                  className="
-                    relative flex h-14 w-14 items-center justify-center overflow-hidden rounded-2xl border border-[#EF1454]/30 bg-white shadow-[0_10px_30px_rgba(0,0,0,0.25)] transition-all duration-300 group-hover:border-[#EF1454]/70
-                  "
-                >
-                  <img
-                    src="/images/bellis-logo.jpeg"
-                    alt="Bellis Capital"
-                    className="
-                     object-contain p-1.5 transition-transform duration-500 group-hover:scale-105
-                    "
-                  />
-                </div>
-
-                <div>
-                  <p
-                    className="
-                      font-serif
-                      text-[15px]
-                      font-bold
-                      tracking-tight
-                      text-white
-                    "
-                  >
-                    Bellis{" "}
-                    <span className="text-[#EF1454]">
-                      Capital
-                    </span>
-                  </p>
-
-                  <p
-                    className="
-                      hidden
-                      text-[8px]
-                      uppercase
-                      tracking-[0.2em]
-                      text-white
-                      sm:block
-                    "
-                  >
-                    Wealth & Health
-                  </p>
-                </div>
-              </Link>
-
-              {/* =================================================
-                  DESKTOP NAVIGATION
-              ================================================= */}
-
-              <div className="flex items-center gap-2">
-                {navItems.map((item) => {
-                  const active = pathname === item.href;
-
-                  return (
-                    <Link
-                      key={item.href}
-                      href={item.href}
-                      onClick={() => setOpen(false)}
-                      className={`
-                        relative
-                        rounded-xl
-                        px-4
-                        py-2
-                        text-sm
-                        font-medium
-                        transition-all
-                        duration-300
-
-                        ${
-                          active
-                            ? "bg-[var(--bg-color-secondary)] text-white"
-                            : "text-white hover:bg-white hover:text-black"
-                        }
-                      `}
-                    >
-                      {item.label}
-
-                      {active && (
-                        <motion.span
-                          layoutId="active-nav"
-                          className="
-                            absolute
-                            bottom-0
-                            left-4
-                            right-4
-                            h-[2px]
-                            rounded-full
-                            bg-rose-500
-                          "
-                        />
-                      )}
-                    </Link>
-                  );
-                })}
-              </div>
-
-              {/* =================================================
-                  DESKTOP CLOSE
-              ================================================= */}
-
-              <button
-                type="button"
-                onClick={() => setOpen(false)}
-                aria-label="Close navigation"
-                className="
-                  flex
-                  h-10
-                  w-10
-                  items-center
-                  justify-center
-                  rounded-xl
-                  border
-                  border-white/10
-                  bg-white/5
-                  text-white
+                key={item.href}
+                href={item.href}
+                className={`
+                  relative
+                  rounded-full
+                  px-5
+                  py-2
+                  text-sm
+                  font-semibold
                   transition-all
                   duration-300
-                  hover:bg-white/10
-                "
+                  ${
+                    active
+                      ? "bg-white/10 text-white shadow-inner"
+                      : "text-white/80 hover:bg-white/5 hover:text-white"
+                  }
+                `}
               >
-                <X size={20} />
-              </button>
-            </nav>
-          </motion.header>
-        )}
-      </AnimatePresence>
+                {item.label}
 
-      {/* =====================================================
-          MOBILE NAVIGATION
-          Only visible below md
-      ====================================================== */}
+                {active && (
+                  <motion.span
+                    layoutId="navbar-active-indicator"
+                    className="absolute bottom-1 left-5 right-5 h-[2px] rounded-full bg-[#EF1454]"
+                    transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                  />
+                )}
+              </Link>
+            );
+          })}
+        </nav>
 
+        {/* =================================================
+            DESKTOP CTA BUTTON
+        ================================================= */}
+        <div className="hidden items-center gap-4 md:flex">
+          <Link
+              href="/contact#contact-details"            className="
+              group
+              inline-flex
+              items-center
+              gap-2
+              rounded-full
+              bg-[#EF1454]
+              px-5
+              py-2.5
+              text-xs
+              font-bold
+              uppercase
+              tracking-[0.12em]
+              text-white
+              shadow-lg
+              shadow-[#EF1454]/25
+              transition-all
+              duration-300
+              hover:-translate-y-0.5
+              hover:bg-[#FF477A]
+              hover:shadow-[#EF1454]/40
+            "
+          >
+            <span>Get Started</span>
+            <ArrowRight
+              size={14}
+              className="transition-transform duration-300 group-hover:translate-x-1"
+            />
+          </Link>
+        </div>
+
+        {/* =================================================
+            MOBILE HAMBURGER BUTTON
+        ================================================= */}
+        <button
+          type="button"
+          onClick={() => setMobileOpen((prev) => !prev)}
+          aria-label={mobileOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-expanded={mobileOpen}
+          className="
+            flex
+            h-11
+            w-11
+            items-center
+            justify-center
+            rounded-xl
+            border
+            border-white/10
+            bg-white/5
+            text-white
+            transition-all
+            duration-300
+            hover:bg-white/10
+            md:hidden
+          "
+        >
+          {mobileOpen ? (
+            <X size={22} className="text-[#EF1454]" />
+          ) : (
+            <Menu size={22} />
+          )}
+        </button>
+      </div>
+
+      {/* =================================================
+          MOBILE MENU ACCORDION
+      ================================================= */}
       <AnimatePresence>
-        {open && (
+        {mobileOpen && (
           <motion.div
-            initial={{
-              opacity: 0,
-              y: -15,
-              scale: 0.98,
-            }}
-            animate={{
-              opacity: 1,
-              y: 0,
-              scale: 1,
-            }}
-            exit={{
-              opacity: 0,
-              y: -15,
-              scale: 0.98,
-            }}
-            transition={{
-              duration: 0.3,
-              ease: "easeOut",
-            }}
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.25, ease: "easeInOut" }}
             className="
-              fixed
-              left-4
-              right-4
-              top-[82px]
-              z-[95]
-
               overflow-hidden
-
-              rounded-2xl
-              border
+              border-b
               border-white/10
-
-              bg-[#102A43]/98
-
-              p-4
-
-              shadow-[0_25px_80px_rgba(0,0,0,0.45)]
-
+              bg-[#0B1D31]/98
+              px-6
+              pb-6
+              pt-2
               backdrop-blur-2xl
-
               md:hidden
             "
           >
-            {/* =================================================
-                MOBILE LINKS
-            ================================================= */}
-
-            <div className="space-y-2">
+            <div className="space-y-2 pt-2">
               {navItems.map((item) => {
                 const active = pathname === item.href;
 
@@ -375,97 +278,66 @@ export default function Navbar() {
                   <Link
                     key={item.href}
                     href={item.href}
-                    onClick={() => setOpen(false)}
+                    onClick={() => setMobileOpen(false)}
                     className={`
-                      group
                       flex
-                      h-14
+                      h-12
                       w-full
                       items-center
                       justify-between
                       rounded-xl
-                      px-5
-
-                      text-base
+                      px-4
+                      text-sm
                       font-semibold
-
                       transition-all
                       duration-300
-
                       ${
                         active
-                          ? "bg-rose-500/10 text-rose-400"
-                          : "text-white/70 hover:bg-white/5 hover:text-white"
+                          ? "bg-[#EF1454]/15 text-[#EF1454]"
+                          : "text-white/80 hover:bg-white/5 hover:text-white"
                       }
                     `}
                   >
-                    <span>
-                      {item.label}
-                    </span>
-
+                    <span>{item.label}</span>
                     <ArrowRight
-                      size={18}
-                      className={`
-                        transition-all
-                        duration-300
-
-                        ${
-                          active
-                            ? "text-rose-500"
-                            : "text-white/30 group-hover:translate-x-1 group-hover:text-white"
-                        }
-                      `}
+                      size={16}
+                      className={active ? "text-[#EF1454]" : "text-white/30"}
                     />
                   </Link>
                 );
               })}
             </div>
 
-            {/* =================================================
-                DIVIDER
-            ================================================= */}
-
             <div className="my-4 h-px bg-white/10" />
 
-            {/* =================================================
-                MOBILE CTA
-            ================================================= */}
-
             <Link
-              href="/contact"
-              onClick={() => setOpen(false)}
+              href="/contact#contact-details"
+              onClick={() => setMobileOpen(false)}
               className="
                 flex
-                h-14
+                h-12
                 w-full
                 items-center
                 justify-center
-                gap-3
-
+                gap-2
                 rounded-xl
-
-                bg-rose-500
-
-                text-base
+                bg-[#EF1454]
+                text-sm
                 font-bold
-                text-[#102A43]
-
+                text-white
+                shadow-lg
+                shadow-[#EF1454]/30
                 transition-all
                 duration-300
-
-                hover:bg-rose-400
-                active:scale-[0.98]
+                hover:bg-[#FF477A]
               "
             >
-              <span>
-                Start Your Journey
-              </span>
-
-              <ArrowRight size={19} />
+              <span>Get Started</span>
+              <ArrowRight size={16} />
             </Link>
           </motion.div>
         )}
       </AnimatePresence>
-    </>
+    </header>
   );
 }

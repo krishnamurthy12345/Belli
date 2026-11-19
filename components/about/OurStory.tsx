@@ -85,7 +85,7 @@ export default function OurStory() {
 
                 {/* Founder Name & Info Overlay */}
                 <div className="absolute bottom-6 left-6 z-20 sm:bottom-8 sm:left-12">
-                  <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-[var(--color-primary)]">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-white">
                     Bellis Capital
                   </p>
 

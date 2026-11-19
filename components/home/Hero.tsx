@@ -67,7 +67,7 @@ export default function InvestmentScene() {
     <section
       ref={containerRef}
       className="
-        relative
+ relative
         h-[680px]
         w-full
         overflow-hidden
@@ -75,8 +75,8 @@ export default function InvestmentScene() {
         sm:h-[760px]
         lg:h-[820px]
       "
-    >
-      {/* =========================================
+>
+        {/* =========================================
           BACKGROUND VIDEO
       ========================================= */}
 
@@ -102,7 +102,7 @@ export default function InvestmentScene() {
       </motion.video>
 
       {/* =========================================
-          CINEMATIC OVERLAY (Balanced, Dark & Visible)
+          CINEMATIC OVERLAY (Light Left, Dark Right)
       ========================================= */}
 
       <div
@@ -111,9 +111,9 @@ export default function InvestmentScene() {
           absolute
           inset-0
           bg-gradient-to-r
-          from-[#071522]/85
-          via-[#071522]/65
-          to-[#071522]/80
+          from-transparent
+          via-[#071522]/5
+          to-[#071522]/85
         "
       />
 
@@ -174,70 +174,7 @@ export default function InvestmentScene() {
         BELLIS CAPITAL
       </motion.div>
 
-      {/* =========================================
-          TOP LABEL
-      ========================================= */}
 
-      <div
-        className="
-          absolute
-          left-0
-          right-0
-          top-0
-          z-20
-          mx-auto
-          flex
-          max-w-7xl
-          items-center
-          justify-between
-          px-6
-          py-7
-          sm:px-10
-          lg:px-16
-        "
-      >
-        {/* Logo */}
-        <motion.div
-          initial={{
-            opacity: 0,
-            y: -20,
-          }}
-          animate={{
-            opacity: 1,
-            y: 0,
-          }}
-          transition={{
-            duration: 0.8,
-          }}
-        >
-          <Link
-            href="/"
-            className="group flex items-center gap-3.5"
-            aria-label="Bellis Capital Home"
-          >
-            <div className="relative flex h-12 w-12 items-center justify-center overflow-hidden rounded-xl border border-[#EF1454]/30 bg-white p-1 shadow-[0_4px_20px_rgba(0,0,0,0.25)] transition-all duration-300 group-hover:scale-105 group-hover:border-[#EF1454]/70">
-              <img
-                src="/images/bellis-logo.jpeg"
-                alt="Bellis Capital Logo"
-                className="h-full w-full object-contain"
-              />
-            </div>
-
-            <div>
-              <div className="text-base font-bold tracking-tight text-white transition-colors duration-300 group-hover:text-[#EF1454] sm:text-lg">
-                BELLIS{" "}
-                <span className="text-[#EF1454]">
-                  CAPITAL
-                </span>
-              </div>
-
-              <div className="text-[9px] font-bold uppercase tracking-[0.22em] text-[#168BD2]">
-                Wealth and Health
-              </div>
-            </div>
-          </Link>
-        </motion.div>
-      </div>
 
       {/* =========================================
           MAIN CONTENT
@@ -295,7 +232,7 @@ export default function InvestmentScene() {
             <span
               className="
                 text-xs
-                font-medium
+                font-bold
                 uppercase
                 tracking-[0.28em]
                 text-[var(--text-color-primary)]
@@ -479,12 +416,14 @@ export default function InvestmentScene() {
             >
               Discover Bellis
 
-              <span
+              <ArrowUpRight
                 className="
-                  h-1
-                  w-1
-                  rounded-full
-                  bg-[#EF1454]
+                  h-4
+                  w-4
+                  transition-transform
+                  duration-300
+                  group-hover:-translate-y-0.5
+                  group-hover:translate-x-0.5
                 "
               />
             </Link>

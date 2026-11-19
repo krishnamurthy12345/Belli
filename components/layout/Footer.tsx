@@ -24,33 +24,25 @@ export default function Footer() {
   return (
     <footer className="relative overflow-hidden bg-[var(--color-dark)] text-white">
       {/* =====================================================
-          BACKGROUND EFFECTS
+          BACKGROUND EFFECTS (Top Section)
       ====================================================== */}
-
       <div className="pointer-events-none absolute -left-40 top-20 h-[350px] w-[350px] rounded-full bg-[var(--color-secondary)]/20 blur-[120px]" />
-
       <div className="pointer-events-none absolute -right-40 bottom-20 h-[400px] w-[400px] rounded-full bg-[var(--color-primary)]/15 blur-[130px]" />
 
+      {/* =====================================================
+          1. MAIN FOOTER (Top Container)
+      ====================================================== */}
       <div className="relative z-10 container-width">
-        {/* =====================================================
-            MAIN FOOTER
-        ====================================================== */}
-
-        <div className="grid gap-12 border-b border-white/10 py-16 md:grid-cols-2 lg:grid-cols-[1.35fr_0.8fr_0.8fr_1fr]">
-          {/* =================================================
-              BRAND
-          ================================================= */}
-
+        <div className="grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-[1.35fr_0.8fr_0.8fr_1fr]">
+          {/* BRAND */}
           <div>
             <Link
               href="/"
               aria-label="Bellis Capital Home"
               className="group inline-flex items-center gap-3"
             >
-              {/* Logo */}
               <div className="relative">
                 <div className="absolute -inset-2 rounded-2xl bg-[var(--color-primary)]/20 opacity-0 blur-xl transition-opacity duration-500 group-hover:opacity-100" />
-
                 <div className="relative flex h-14 w-14 items-center justify-center overflow-hidden rounded-2xl border border-[var(--color-primary)]/30 bg-white shadow-[0_10px_30px_rgba(0,0,0,0.25)] transition-all duration-300 group-hover:border-[var(--color-primary)]">
                   <Image
                     src="/images/bellis-logo.jpeg"
@@ -63,42 +55,35 @@ export default function Footer() {
                 </div>
               </div>
 
-              {/* Brand name */}
               <div>
                 <div className="text-xl font-extrabold leading-none tracking-tight text-white transition-colors duration-300 group-hover:text-[var(--color-primary)]">
-                  BELLI'S{" "}
-                  <span className="font-serif font-normal italic text-[var(--color-primary)]">
+                  BELLI&apos;S{" "}
+                  <span className="font-serif font-semibold italic text-[var(--color-primary)] group-hover:text-white">
                     CAPITAL
                   </span>
                 </div>
-
                 <div className="mt-1 text-[9px] font-bold uppercase tracking-[0.2em] text-[var(--text-color-light)]">
                   Wealth and Health
                 </div>
               </div>
             </Link>
 
-            {/* Description */}
             <p className="mt-6 max-w-sm text-sm leading-7 text-white/70">
               SEBI-aligned wealth management and mutual fund advisory dedicated
               to systematic capital compounding and disciplined portfolio
               management.
             </p>
 
-            {/* Accent */}
             <div className="mt-7 flex items-center gap-2">
               <span className="h-[2px] w-10 rounded-full bg-[var(--color-primary)]" />
-
               <span className="h-2 w-2 animate-pulse rounded-full bg-[var(--color-secondary)]" />
             </div>
 
-            {/* CTA */}
             <Link
-              href="/contact"
-              className="group mt-7 inline-flex items-center gap-2 text-md font-semibold text-[var(--color-bg-light)] hover:opacity-80 hover:text-[var(--color-primary)]"
+              href="/contact#contact-details"
+              className="group mt-7 inline-flex items-center gap-2 text-md font-semibold text-[var(--color-bg-light)] hover:text-[var(--color-primary)] hover:opacity-80"
             >
               Start a conversation
-
               <ArrowUpRight
                 size={16}
                 className="transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1"
@@ -106,15 +91,11 @@ export default function Footer() {
             </Link>
           </div>
 
-          {/* =================================================
-              STRATEGIES
-          ================================================= */}
-
+          {/* STRATEGIES */}
           <div>
             <h3 className="text-md font-bold uppercase tracking-[0.2em] text-[var(--bg-color-light)]">
               Strategies
             </h3>
-
             <ul className="mt-6 space-y-4">
               {footerLinks.Strategies.map((link) => (
                 <li key={link.href + link.label}>
@@ -129,21 +110,17 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* =================================================
-              EDUCATION
-          ================================================= */}
-
+          {/* EDUCATION */}
           <div>
             <h3 className="text-md font-bold uppercase tracking-[0.2em] text-[var(--bg-color-light)]">
               Education
             </h3>
-
             <ul className="mt-6 space-y-4">
               {footerLinks.Education.map((link) => (
                 <li key={link.href + link.label}>
                   <Link
                     href={link.href}
-                    className="inline-flex text-sm font-semibold text-white/70 transition-all duration-300"
+                    className="inline-flex text-sm font-semibold text-white/70 transition-all duration-300 hover:text-white"
                   >
                     {link.label}
                   </Link>
@@ -152,17 +129,12 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* =================================================
-              DIRECT ADVISORY
-          ================================================= */}
-
+          {/* DIRECT ADVISORY */}
           <div>
             <h3 className="text-md font-bold uppercase tracking-[0.2em] text-[var(--bg-color-light)]">
               Direct Advisory
             </h3>
-
             <div className="mt-6 space-y-5">
-              {/* Email */}
               <a
                 href="mailto:belliscapitalofficial@gmail.com"
                 className="group flex items-start gap-3"
@@ -171,13 +143,11 @@ export default function Footer() {
                   size={17}
                   className="mt-0.5 shrink-0 text-[var(--color-primary)]"
                 />
-
                 <span className="break-all text-sm font-semibold leading-6 text-white/70 transition-colors duration-300 group-hover:text-white">
                   belliscapitalofficial@gmail.com
                 </span>
               </a>
 
-              {/* Phone */}
               <a
                 href="tel:+919488974620"
                 className="group flex items-center gap-3"
@@ -186,19 +156,16 @@ export default function Footer() {
                   size={17}
                   className="shrink-0 text-[var(--color-primary)]"
                 />
-
                 <span className="text-md text-white/70 transition-colors duration-300 group-hover:text-white">
                   +91 94889 74620
                 </span>
               </a>
 
-              {/* Location */}
               <div className="flex items-start gap-3">
                 <MapPin
                   size={17}
                   className="mt-0.5 shrink-0 text-[var(--color-primary)]"
                 />
-
                 <p className="text-md leading-6 text-white/70">
                   Coimbatore
                   <br />
@@ -206,13 +173,11 @@ export default function Footer() {
                 </p>
               </div>
 
-              {/* CTA */}
               <Link
-                href="/contact"
+                href="/contact#contact-details"
                 className="group inline-flex items-center gap-2 border-b border-[var(--color-primary)] pb-1 pt-2 text-sm font-bold uppercase tracking-[0.16em] text-[var(--color-bg-light)] transition-all duration-300 hover:border-white hover:text-[var(--color-primary)]"
               >
                 Book Advisory Call
-
                 <ArrowUpRight
                   size={14}
                   className="transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1"
@@ -221,63 +186,70 @@ export default function Footer() {
             </div>
           </div>
         </div>
+      </div>
 
-        {/* =====================================================
-            DISCLAIMER
-        ====================================================== */}
+      {/* =====================================================
+          2. DISCLAIMER & BOTTOM BAR (Separate Full-Width BG)
+      ====================================================== */}
+      {/* Change bg-[#070b14] or bg-black/40 to any custom variable/color you prefer */}
+      <div className="relative z-10 border-t border-white/10 bg-white">
+        <div className="container-width">
+          {/* DISCLAIMER */}
+          <div className="border-b border-white/10 py-4">
+            <div className="rounded-2xl border border-black/10 bg-white/[0.03] p-5">
+              <p className="text-justify text-[13px] leading-relaxed text-black">
+                <span className="font-bold text-[var(--color-primary)]">
+                  Disclaimer:
+                </span>{" "}
+                Mutual Fund investments are subject to market risks, read all
+                scheme-related documents carefully. The information provided on
+                this website is for educational and informational purposes only
+                and does not constitute financial advice. Past performance is
+                not indicative of future results.
+              </p>
+            </div>
+          </div>
 
-        <div className="border-b border-white/10 py-8">
-          <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
-            <p className="text-justify text-[13px] leading-relaxed text-white/60">
-              <span className="font-bold text-[var(--color-primary)]">Disclaimer:</span>{" "}
-              Mutual Fund investments are subject to market risks, read all
-              scheme-related documents carefully. The information provided on
-              this website is for educational and informational purposes only
-              and does not constitute financial advice. Past performance is not
-              indicative of future results.
-            </p>
+          {/* BOTTOM BAR */}
+          <div className="flex flex-col gap-4 py-3 text-sm text-black/70 sm:flex-row sm:items-center sm:justify-between">
+            <div className="flex flex-wrap items-center gap-2">
+              <p>
+                © {new Date().getFullYear()} Belli&apos;s Capital. All rights
+                reserved.
+              </p>
+
+              <span className="text-black/20">|</span>
+
+              <a
+                href="https://www.gdinexus.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors duration-300 hover:text-[var(--color-primary)]"
+              >
+                Powered by{" "}
+                <span className="text-sm font-semibold text-black/50 hover:text-[var(--color-primary)]">
+                  GDI Nexus
+                </span>
+              </a>
+            </div>
+
+            <div className="flex gap-6 text-sm">
+              <Link
+                href="/privacy-policy"
+                className="transition-colors duration-300 hover:text-[var(--color-primary)]"
+              >
+                Privacy Policy
+              </Link>
+
+              <Link
+                href="/terms"
+                className="transition-colors duration-300 hover:text-[var(--color-primary)]"
+              >
+                Terms of Use
+              </Link>
+            </div>
           </div>
         </div>
-
-        {/* =====================================================
-            BOTTOM BAR
-        ====================================================== */}
-
-        <div className="flex flex-col gap-4 py-7 text-sm text-white/70 sm:flex-row sm:items-center sm:justify-between">
-          <div className="flex flex-wrap items-center gap-2">
-            <p>
-              © {new Date().getFullYear()} Belli&apos;s Capital. All rights reserved.
-            </p>
-
-            <span className="text-white/20">|</span>
-
-            <a
-              href="https://www.gdinexus.in/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="transition-colors duration-300 hover:text-[var(--color-primary)]"
-            >
-              Powered by <span className="text-sm font-semibold text-white/50 hover:text-[var(--color-primary)]">GDI Nexus</span>
-            </a>
-          </div>
-
-          <div className="flex gap-6 text-sm">
-            <Link
-              href="/privacy-policy"
-              className="transition-colors duration-300 hover:text-[var(--color-primary)]"
-            >
-              Privacy Policy
-            </Link>
-
-            <Link
-              href="/terms"
-              className="transition-colors duration-300 hover:text-[var(--color-primary)]"
-            >
-              Terms of Use
-            </Link>
-          </div>
-        </div>
-
       </div>
     </footer>
   );

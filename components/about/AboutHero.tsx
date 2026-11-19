@@ -167,7 +167,7 @@ export default function AboutHero() {
                     Bellis
                   </p>
 
-                  <p className="mt-2 font-serif text-3xl italic text-white sm:text-4xl">
+                  <p className="mt-2 font-serif text-3xl italic text-[var(--text-color-primary)] sm:text-4xl">
                     Capital
                   </p>
 
